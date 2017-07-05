@@ -339,7 +339,7 @@
             // 得到手数 id = Volume_id
             var tick_price = Number(document.getElementById('tick_price_id').value);
             // alert(tick_price);
-            if (tick_price === 0 || isNaN(tick_price)) {
+            if (isNaN(tick_price)) {
                 alert('请输入有效的行情价格');
                 return false;
             }    
@@ -347,7 +347,7 @@
             var board_lot = Number(document.getElementById('board_lot_id').innerText);
 
             var Rate = Number(document.getElementById('Rate_id').value) /100;
-            if (Rate === 0 || isNaN(Rate)) {
+            if (isNaN(Rate)) {
                 alert('请输入有效的保证金率');
                 return false;
             }
@@ -387,7 +387,7 @@
         <script type="text/javascript">
         function check_tick_price(tick_price) {
             var price = Number(tick_price);
-            if (price === 0 || isNaN(price)) {
+            if (isNaN(price)) {
                 alert('请输入有效的数字');
                 return false;
             }
