@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="Content-Language" content="zh-CN" />
+        <meta name="viewport" content="width = device - width, initial - scale = 1" />
         <meta name="copyright" content="本页版权归中国平安所有。All Rights Reserved" />
 
         <title>保证金计算</title>
@@ -364,7 +365,6 @@
 
         <script type="text/javascript">
         function clear_table() {
-            // alert('hello world!');
             document.getElementById('product_id').value = "cu";
             document.getElementById('board_lot_id').value = "5";
             // document.getElementById('board_lot_type_id').innerText = "T";
@@ -389,14 +389,20 @@
             return true;
         }
         </script>
+
+        <!--<style type="text/css">
+        .divcss5 {
+            text-align: center
+        }
+        </style>-->
     </head>
 
-    <body style="text-align:left;">
+    <body>
         <div id="bg1" style="text-align:left;border-left:1px; border-top:1px solid #999; border-right:1px solid #999; width:534px;">
-            <!--<img src="http://www.pingan.com/app_images/logo_pa_pinganone.gif" style="margin:10px 0px 0px 0px;position:absolute;">-->
             <img src="res/logo.png" style="margin:10px 0px 0px 0px; position:absolute;">
-            <img src="http://futures.pingan.com/common/bg2.gif" width="530" height="126">
-            <!--<img src="http://futures.pingan.com/common/bg3.gif">-->
+            <img src="res/bg2.png" width="530" height="126">
+            <!--<img src="res/logo.png" style="margin:10px 0px 0px 0px" />
+            <img src="res/bg2.gif" width="530" height="126" />-->
         </div>
 
         <div style="border-bottom:1px solid #999; border-right:1px solid #999; width:534px; position:absolute; z-index:100; margin-top:-40px;">
@@ -412,7 +418,7 @@
                             <td class="firstcol" style="font-size:15px;">品种</td>
 
                             <td>
-                                <select name="product" id="product_id" onchange="get_product_info(this.value)">
+                                <select style="text-align:left;padding-left:0px" name="product" id="product_id" onchange="get_product_info(this.value)">
                                     <option value="cu">铜cu</option>
                                     <option value="al">铝al</option>
                                     <option value="zn">锌zn</option>
@@ -542,7 +548,7 @@
             </h1>
         </div>
 
-        <style>
+        <!--<style>
             .showtest{}
             .showtest a{text-decoration:none;}
             .showtest span{border:1px solid #c9c9c9;display:block; height:25px; line-height:25px; float:left; font-size:12px; background:#eee; padding:0 4px;}
@@ -550,9 +556,9 @@
             .showtest a:link,.showtest a:visited { color: #333;}
             .showtest a:hover,.showtest a:active { color: #be301f;}
             td{text-align:left;}
-        </style>
+        </style>-->
 
-        <div style="text-align:center; line-height:130%; font-size:12px; margin-top:10px; position:absolute; top:500px;">
+        <div style="text-align:center; line-height:130%; font-size:12px; margin-top:10px; position:absolute; top:550px;">
             <div>
                 此计算器的计算结果仅供参考，平安期货对此结果的准确性不承担任何责任。<br />
                 实际数额以银行/保险公司/国家相关机构确认的结果为准。<br />
@@ -561,11 +567,11 @@
             </div>
         </div>
 
-        <script language="javascript">
+        <!--<script language="javascript">
             var SDC_js =document.createElement("script");
             window.setTimeout('SDC_js.src = "/paqh/js/sdc_page.js"', 0);
             var headElem =document.getElementsByTagName("head")[0];
             headElem.appendChild(SDC_js);
-        </script>
+        </script>-->
     </body>
 </html>
