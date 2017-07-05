@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Language" content="zh-CN" />
+        <meta name="copyright" content="本页版权归中国平安所有。All Rights Reserved" />
+
+        <title>保证金计算</title>
+        <link rel="stylesheet" type="text/css" href="http://futures.pingan.com/paqh/css/sjbk_style.css" media="all" />
+        <link rel="shortcut icon" href="http://futures.pingan.com/favicon.ico">
+
+        <script type="text/javascript" src="/app_js/futures/libs/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="//www.pingan.com/app_js/jquery-ui-1.7.1.js"></script>
+
+        <script>
+            $(function(){
+                window.resizeTo(570,650);	
+            });	
+        </script>
+
+        <script type="text/javascript">
+        function Selecter_func(targ, selObj, restore) {
+            if (selObj.options[selObj.selectedIndex].value === "") {
+                targ.value = "10";
+            }
+        }
+        </script>
+
+        <script type="text/javascript">
+        function get_product_info(product_name) {
+            var board_lot = '';
+            var board_lot_type = "";
+            var product_rate = '';
+            if (product_name === 'au') {
+                board_lot = '1000';
+                board_lot_type = 'G';
+                product_rate = '13';
+            }
+            else if (product_name === 'ag') {
+                board_lot = '15';
+                board_lot_type = 'KG';
+                product_rate = '15';
+            }
+            else if (product_name === 'cu') {
+                board_lot = '5';
+                board_lot_type = 'T';
+                product_rate = '15';
+            }
+            else if (product_name === 'al') {
+                board_lot = '5';
+                board_lot_type = 'T';
+                product_rate = '14';
+            }
+            else if (product_name === 'pb') {
+                board_lot = '5';
+                board_lot_type = 'T';
+                product_rate = '14';
+            }
+            else if (product_name === 'zn') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '15';
+            }
+            else if (product_name === 'rb') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '17';
+            }
+            else if (product_name === 'wr') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '26';
+            }
+            else if (product_name === 'hc') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '16';
+            }
+            else if (product_name === 'ru') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '16';
+            }
+            else if (product_name === 'bu') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '14';
+            }
+            else if (product_name === 'ni') {
+                board_lot = '1';
+                board_lot_type = 'T';
+                product_rate = '14';
+            }
+            else if (product_name === 'sn') {
+                board_lot = '1';
+                board_lot_type = 'T';
+                product_rate = '16';
+            }
+            else if (product_name === 'fu') {
+                board_lot = '50';
+                board_lot_type = 'T';
+                product_rate = '25';
+            }
+            else if (product_name === 'a') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'b') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '11';
+            }
+            else if (product_name === 'c') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'm') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '14';
+            }
+            else if (product_name === 'p') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'y') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'j') {
+                board_lot = '100';
+                board_lot_type = 'T';
+                product_rate = '18';
+            }
+            else if (product_name === 'jm') {
+                board_lot = '60';
+                board_lot_type = 'T';
+                product_rate = '18';
+            }
+            else if (product_name === 'i') {
+                board_lot = '100';
+                board_lot_type = 'T';
+                product_rate = '18';
+            }
+            else if (product_name === 'l') {
+                board_lot = '5';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'v') {
+                board_lot = '5';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'pp') {
+                board_lot = '5';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'fb') {
+                board_lot = '500';
+                board_lot_type = '张';
+                product_rate = '25';
+            }
+            else if (product_name === 'bb') {
+                board_lot = '500';
+                board_lot_type = '张';
+                product_rate = '25';
+            }
+            else if (product_name === 'jd') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '12';
+            }
+            else if (product_name === 'cs') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'CF') {
+                board_lot = '5';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'RM') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '12';
+            }
+            else if (product_name === 'RS') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '26';
+            }
+            else if (product_name === 'SR') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '11';
+            }
+            else if (product_name === 'OI') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'PM') {
+                board_lot = '50';
+                board_lot_type = 'T';
+                product_rate = '12';
+            }
+            else if (product_name === 'MA') {
+                board_lot = '10';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'RI') {
+                board_lot = '20';
+                board_lot_type = 'T';
+                product_rate = '11';
+            }
+            else if (product_name === 'LR') {
+                board_lot = '20';
+                board_lot_type = 'T';
+                product_rate = '11';
+            }
+            else if (product_name === 'WH') {
+                board_lot = '20';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'FG') {
+                board_lot = '20';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'JR') {
+                board_lot = '20';
+                board_lot_type = 'T';
+                product_rate = '11';
+            }
+            else if (product_name === 'SF') {
+                board_lot = '5';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'SM') {
+                board_lot = '5';
+                board_lot_type = 'T';
+                product_rate = '13';
+            }
+            else if (product_name === 'TA') {
+                board_lot = '5';
+                board_lot_type = 'T';
+                product_rate = '12';
+            }
+            else if (product_name === 'ZC') {
+                board_lot = '100';
+                board_lot_type = 'T';
+                product_rate = '16';
+            }
+            else if (product_name === 'IF') {
+                board_lot = '300';
+                board_lot_type = '';
+                product_rate = '25';
+            }
+            else if (product_name === 'IC') {
+                board_lot = '200';
+                board_lot_type = '';
+                product_rate = '35';
+            }
+            else if (product_name === 'IH') {
+                board_lot = '300';
+                board_lot_type = '';
+                product_rate = '25';
+            }
+            else if (product_name === 'TF') {
+                board_lot = '10000';
+                board_lot_type = '';
+                product_rate = '2.2';
+            }
+            else if (product_name === 'T') {
+                board_lot = '10000';
+                board_lot_type = '';
+                product_rate = '3';
+            }
+
+            document.getElementById('Rate_id').value = product_rate;
+            // document.getElementById('board_lot_id').value =board_lot;
+            document.getElementById('board_lot_id').innerText = board_lot;
+            // document.getElementById('board_lot_type_id').innerText = board_lot_type;
+            // if (board_lot_type === '') {
+            //     document.getElementById('tick_price_type_id').innerText = board_lot_type;
+            // }
+            // else {
+            //     document.getElementById('tick_price_type_id').innerText = '/' + board_lot_type;
+            // }
+            document.getElementById('tick_price_id').value = "";
+            document.getElementById('Margin_Amount_id').innerText = "0.0";
+            document.getElementById('Deposit_Amount_id').innerText = "0.0";
+        }
+        </script>
+
+        <script type="text/javascript">
+        function numMulti(num1, num2) {
+            var baseNum = 0;
+            try {
+                baseNum +=num1.toString().split(".")[1].length;
+            }
+            catch(e) {}
+
+            try {
+                baseNum +=num2.toString().split(".")[1].length;
+            }
+            catch(e) {}
+
+            return Number(num1.toString().replace(".", "")) * Number(num2.toString().replace(".", "")) / Math.pow(10, baseNum);
+        };
+        </script>
+
+        <script type="text/javascript">
+        function calculate_margin() {
+            // 得到单位 id = board_lot_id
+            // 得到单价 id = tick_price_id
+            // 得到保证金比率 id = Rate_id
+            // 得到手数 id = Volume_id
+            if (tick_price === 0) {
+                
+            }
+
+            var tick_price = Number(document.getElementById('tick_price_id').value);
+            // alert(tick_price);
+            if (tick_price === 0 || isNaN(tick_price)) {
+                alert('请输入有效的行情价格');
+                return false;
+            }    
+
+            var board_lot = Number(document.getElementById('board_lot_id').innerText);
+
+            var Rate = Number(document.getElementById('Rate_id').value) /100;
+            if (Rate === 0 || isNaN(Rate)) {
+                alert('请输入有效的保证金率');
+                return false;
+            }
+            var Volume = Number(document.getElementById('Volume_id').value);
+
+            // alert(Rate / 100);
+            var margin = numMulti(board_lot, tick_price);
+            margin = numMulti(margin, Rate);
+            margin = numMulti(margin, Volume);
+            // var margin = board_lot * tick_price * Rate * Volume;
+            // var margin = 1000 * tick_price * (Rate / 100) * Volume;
+
+            // 设置保证金
+            document.getElementById('Margin_Amount_id').innerText = margin;
+
+            // 设置入金
+            margin = numMulti(margin, 3);
+            document.getElementById('Deposit_Amount_id').innerText = margin;
+        }
+        </script>
+
+        <script type="text/javascript">
+        function clear_table() {
+            // alert('hello world!');
+            document.getElementById('product_id').value = "cu";
+            document.getElementById('board_lot_id').value = "5";
+            // document.getElementById('board_lot_type_id').innerText = "T";
+            document.getElementById('tick_price_id').value = "";
+            // document.getElementById('tick_price_type_id').innerText = "/T";
+            document.getElementById('Rate_id').value = "15";
+            document.getElementById('Volume_id').value = "1";
+            document.getElementById('Margin_Amount_id').innerText = "0.0";
+            document.getElementById('Deposit_Amount_id').innerText = "0.0";
+        }
+        </script>
+
+        <script type="text/javascript">
+        function check_tick_price(tick_price) {
+            var price = Number(tick_price);
+            if (price === 0 || isNaN(price)) {
+                alert('请输入有效的数字');
+                return false;
+            }
+                
+            calculate_margin();
+            return true;
+        }
+        </script>
+    </head>
+
+    <body style="text-align:left;">
+        <div id="bg1" style="text-align:left;border-left:1px; border-top:1px solid #999; border-right:1px solid #999; width:534px;">
+            <!--<img src="http://www.pingan.com/app_images/logo_pa_pinganone.gif" style="margin:10px 0px 0px 0px;position:absolute;">-->
+            <img src="res/logo.png" style="margin:10px 0px 0px 0px; position:absolute;">
+            <img src="http://futures.pingan.com/common/bg2.gif" width="530" height="126">
+            <!--<img src="http://futures.pingan.com/common/bg3.gif">-->
+        </div>
+
+        <div style="border-bottom:1px solid #999; border-right:1px solid #999; width:534px; position:absolute; z-index:100; margin-top:-40px;">
+            <h1>
+                <div id="FDiv1" class="FDiv1" movable="1" style="text-align:left; font-size:16px; width:530px;">
+                    保证金计算
+                </div>
+            </h1>
+
+            <div class="newslistbox" style="padding-left:0px;"> 
+                <table class="price_tb" cellpadding = "0" cellspacing = "0">
+                        <tr>
+                            <td class="firstcol" style="font-size:15px;">品种</td>
+
+                            <td>
+                                <select name="product" id="product_id" onchange="get_product_info(this.value)">
+                                    <option value="cu">铜cu</option>
+                                    <option value="al">铝al</option>
+                                    <option value="zn">锌zn</option>
+                                    <option value="pb">铅pb</option>
+                                    <option value="ru">橡胶ru</option>
+                                    <option value="au">黄金au</option>
+                                    <option value="fu">燃料油fu</option>
+                                    <option value="rb">螺纹钢rb</option>
+                                    <option value="wr">线材wr</option>
+                                    <option value="ag">白银ag</option>
+                                    <option value="bu">石油沥青bu</option>
+                                    <option value="hc">热轧卷板hc</option>
+                                    <option value="ni">镍ni</option>
+                                    <option value="sn">锡sn</option>
+                                    <option value="a">黄大豆a</option>
+                                    <option value="b">黄豆2号b</option>
+                                    <option value="c">玉米c</option>
+                                    <option value="cs">玉米淀粉cs</option>
+                                    <option value="m">豆粕m</option>
+                                    <option value="y">豆油y</option>
+                                    <option value="p">棕榈油p</option>
+                                    <option value="l">聚乙烯l</option>
+                                    <option value="v">聚氯乙烯v</option>
+                                    <option value="j">冶金焦炭j</option>
+                                    <option value="jm">焦煤jm</option>
+                                    <option value="i">铁矿石i</option>
+                                    <option value="jd">鸡蛋jd</option>
+                                    <option value="bb">胶合板bb</option>
+                                    <option value="fb">纤维板fb</option>
+                                    <option value="pp">聚丙烯pp</option>
+                                    <option value="WH">强麦WH</option>
+                                    <option value="RI">早籼稻RI</option>
+                                    <option value="LR">晚籼稻LR</option>
+                                    <option value="CF">棉一号CF</option>
+                                    <option value="SR">白砂糖SR</option>
+                                    <option value="TA">PTA</option>
+                                    <option value="OI">菜籽油OI</option>
+                                    <option value="MA">甲醇MA</option>
+                                    <option value="PM">普麦PM</option>
+                                    <option value="FG">玻璃FG</option>
+                                    <option value="RS">油菜籽RS</option>
+                                    <option value="RM">菜籽粕RM</option>
+                                    <option value="ZC">新动力煤ZC</option>
+                                    <option value="JR">粳稻JR</option>
+                                    <option value="SF">硅铁SF</option>
+                                    <option value="SM">锰硅SM</option>
+                                    <option value="IF">沪深300IF</option>
+                                    <option value="TF">五年国债TF</option>
+                                    <option value="T">十年国债T</option>
+                                    <option value="IH">上证50 IH</option>
+                                    <option value="IC">中证500 IC</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="firstcol" style="font-size:15px">合约乘数</td>
+
+                            <td>
+                                <label id="board_lot_id" style="margin-left:0px;">5</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="firstcol" style="font-size:15px">行情价格</td>
+
+                            <td>
+                                <input type="text" name="tick_price" id="tick_price_id" style="width:100px; margin-left:0px;" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="firstcol" style="font-size:15px">保证金率(参考值)</td>
+
+                            <td>
+                                <input type="text" name="margin" id="Rate_id" value="15" style="width:100px; margin-left:0px;" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_tick_price(this.value)">%
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="firstcol" style="font-size:15px">交易手数</td>
+
+                            <td>
+                                <select name="Volume" id="Volume_id" style="width:100px" onchange="calculate_margin()">
+                                    <option value = 1>1</option>
+                                    <option value = 2>2</option>
+                                    <option value = 3>3</option>
+                                    <option value = 4>4</option>
+                                    <option value = 5>5</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="firstcol" style="font-size:15px">所需保证金金额</td>
+
+                            <td>
+                                <label id="Margin_Amount_id" style="margin-left:0px;">0.0</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="firstcol" style="font-size:15px">建议入金金额</td>
+
+                            <td>
+                                <label id="Deposit_Amount_id" style="margin-left:0px;">0.0</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="firstcol">&nbsp;</td>
+
+                            <td>
+                                <button type="button" onclick="clear_table()">重置</button>
+                            </td>
+                        </tr>
+
+                </table>
+            </div>
+
+            <h1>
+                <div id="FDiv1" class="FDiv1" movable="1" style="text-align:left; font-size:12px; width:530px;">
+                    <p>说明：</p>
+                    <p>    1、保证金计算公式： 保证金 = 行情价格*合约乘数*保证金比例*手数 </p>
+                    <p>    2、选择您意向交易的品种，输入当前的行情价格与意向成交手数，即可看到一手需要多少保证金与入金金额。</p>
+                </div>
+            </h1>
+        </div>
+
+        <style>
+            .showtest{}
+            .showtest a{text-decoration:none;}
+            .showtest span{border:1px solid #c9c9c9;display:block; height:25px; line-height:25px; float:left; font-size:12px; background:#eee; padding:0 4px;}
+            .showtest span.now{border:1px solid #c9c9c9;display:block; height:25px; line-height:25px; float:left;text-decoration:none; font-size:12px; background:#fff; padding:0 3px; border-bottom:1px solid #fff;}
+            .showtest a:link,.showtest a:visited { color: #333;}
+            .showtest a:hover,.showtest a:active { color: #be301f;}
+            td{text-align:left;}
+        </style>
+
+        <div style="text-align:center; line-height:130%; font-size:12px; margin-top:10px; position:absolute; top:500px;">
+            <div>
+                此计算器的计算结果仅供参考，平安期货对此结果的准确性不承担任何责任。<br />
+                实际数额以银行/保险公司/国家相关机构确认的结果为准。<br />
+                版权所有&copy; 中国平安保险（集团）股份有限公司 未经许可不得复制、转载或摘编，违者必究!<br />
+                Copyright&copy; PING AN INSURANCE (GROUP) COMPANY OF CHINA ,LTD. All Rights Reserved 
+            </div>
+        </div>
+
+        <script language="javascript">
+            var SDC_js =document.createElement("script");
+            window.setTimeout('SDC_js.src = "/paqh/js/sdc_page.js"', 0);
+            var headElem =document.getElementsByTagName("head")[0];
+            headElem.appendChild(SDC_js);
+        </script>
+    </body>
+</html>
