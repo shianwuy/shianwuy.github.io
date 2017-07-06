@@ -438,7 +438,7 @@
                             <td class="firstcol" style="text-align:right; padding-right:10px; font-size:15px; font-family:宋体;">品种</td>
 
                             <td>
-                                <select style="text-align:left;padding-left:0px" name="product" id="product_id" onchange="get_product_info(this.value)">
+                                <select style="text-align:left; padding-left:0px; font-size:15px; font-family:宋体;" name="product" id="product_id" onchange="get_product_info(this.value)">
                                     <option value="cu">铜cu</option>
                                     <option value="al">铝al</option>
                                     <option value="zn">锌zn</option>
@@ -498,9 +498,9 @@
                             <td class="firstcol" style="text-align:right; padding-right:10px; font-size:15px; font-family:宋体;">合约乘数</td>
 
                             <td>
-                                <label id="board_lot_id" style="margin-left:0px;font-family:宋体;">5</label>
-                                <label id="board_lot_type_1_id" style="margin-left:0px;font-family:宋体;">T</label>
-                                <label id="board_lot_type_2_id" style="margin-left:0px;font-family:宋体;">/手</label>
+                                <label id="board_lot_id" style="margin-left:0px; font-size:15px; font-family:宋体;">5</label>
+                                <label id="board_lot_type_1_id" style="margin-left:0px; font-size:15px; font-family:宋体;">T</label>
+                                <label id="board_lot_type_2_id" style="margin-left:0px; font-size:15px; font-family:宋体;">/手</label>
                             </td>
                         </tr>
 
@@ -509,7 +509,7 @@
 
                             <td>
                                 <input type="text" name="tick_price" id="tick_price_id" style="width:100px; margin-left:0px;font-family:宋体;" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)"/>
-                                <label id="tick_price_type_id" style="margin-left:0px;font-family:宋体;">元/T</label>
+                                <label id="tick_price_type_id" style="margin-left:0px; font-size:15px; font-family:宋体;">元/T</label>
                             </td>
                         </tr>
 
@@ -517,7 +517,7 @@
                             <td class="firstcol" style="text-align:right; padding-right:10px; font-size:15px; font-family:宋体;">保证金率(参考值)</td>
 
                             <td>
-                                <input type="text" name="margin" id="Rate_id" value="15" style="width:100px; margin-left:0px;font-family:宋体;" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_tick_price(this.value)">%
+                                <input type="text" name="margin" id="Rate_id" value="15" style="width:100px; margin-left:0px; font-size:15px; font-family:宋体;" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_tick_price(this.value)">%
                             </td>
                         </tr>
 
@@ -525,7 +525,7 @@
                             <td class="firstcol" style="text-align:right; padding-right:10px; font-size:15px; font-family:宋体;">交易手数</td>
 
                             <td>
-                                <select name="Volume" id="Volume_id" style="width:100px" onchange="calculate_margin()">
+                                <select name="Volume" id="Volume_id" style="width:100px; font-size:15px; font-family:宋体;" onchange="calculate_margin()">
                                     <option value = 1>1</option>
                                     <option value = 2>2</option>
                                     <option value = 3>3</option>
@@ -536,21 +536,15 @@
                         </tr>
 
                         <tr>
-                            <td class="firstcol" style="text-align:right; padding-right:10px; font-size:15px; font-family:宋体;">所需保证金金额</td>
+                            <td class="firstcol" style="text-align:right; padding-right:10px; font-size:15px; font-family:宋体;">所需保证金金额（参考值）</td>
 
                             <td>
-                                <label id="Margin_Amount_id" class="co" style="margin-left:0px; font-family:宋体;">0.0</label>
-                                <label style="margin-left:0px; font-family:宋体;">元</label>
+                                <label id="Margin_Amount_id" class="co" style="margin-left:0px; font-size:15px; font-family:宋体;">0.0</label>
+                                <label style="margin-left:0px; font-size:15px; font-family:宋体;">元</label>
                             </td>
                         </tr>
 
                         <tr>
-                            <!--<td class="firstcol" style="text-align:right; padding-right:10px; font-size:15px; font-family:宋体;">建议入金金额</td>
-
-                            <td>
-                                <label id="Deposit_Amount_id" class="co" style="margin-left:0px; font-family:宋体;">0.0</label>
-                                <label style="margin-left:0px; font-family:宋体;">元</label>
-                            </td>-->
                             <td class="firstcol" colspan="2" style="text-align:right; padding-right:10px; font-size:15px; font-family:宋体;">
                                 建议轻仓操作，期货总权益至少为保证金金额的2倍
                             </td>
@@ -572,8 +566,8 @@
                 <div id="FDiv1" movable="1" style="text-align:left; font-size:12px; width:530px;font-family:宋体; color:red">
                     <p>说明：</p>
                     <p>    1、保证金计算公式： 保证金 = 行情价格*合约乘数*保证金比例*手数 </p>
-                    <p>    2、选择您意向交易的品种，输入当前的行情价格与意向成交手数，即可看到一手需要多少保证金与入金金额。</p>
-                    <p> **此计算器的计算结果仅供参考，平安期货对此结果的准确性不承担任何责任。</p>
+                    <p>    2、选择品种、手数、输入价格、即可看到所需保证金参考值.</p>
+                    <p> **此计算器的计算结果仅供参考， 实际数额以成交记录/保证金监控中心记录/结算单确认的结果为准。</p>
                 </div>
             </h1>
         </div>
@@ -587,19 +581,5 @@
             .showtest a:hover,.showtest a:active { color: #be301f;}
             td{text-align:left;}
         </style>-->
-
-        <!--<div class="bottom_footer" style="text-align:center; line-height:130%; font-size:12px;">
-                <p> 此计算器的计算结果仅供参考，平安期货对此结果的准确性不承担任何责任。</p>
-                <p> 实际数额以银行/保险公司/国家相关机构确认的结果为准。</p>
-                <p> 版权所有&copy; 中国平安保险（集团）股份有限公司 未经许可不得复制、转载或摘编，违者必究! </p>
-                <p> Copyright&copy; PING AN INSURANCE (GROUP) COMPANY OF CHINA ,LTD. All Rights Reserved </p>
-        </div>-->
-
-        <!--<script language="javascript">
-            var SDC_js =document.createElement("script");
-            window.setTimeout('SDC_js.src = "/paqh/js/sdc_page.js"', 0);
-            var headElem =document.getElementsByTagName("head")[0];
-            headElem.appendChild(SDC_js);
-        </script>-->
     </body>
 </html>
