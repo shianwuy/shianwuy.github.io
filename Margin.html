@@ -295,13 +295,8 @@
                 board_lot_type_2 = "";
             }
 
-            document.getElementById('Rate_id').value = product_rate;
-            document.getElementById('board_lot_id').innerText = board_lot;
-            document.getElementById('board_lot_type_1_id').innerText =board_lot_type;
-            document.getElementById('board_lot_type_2_id').innerText = board_lot_type_2;
-            document.getElementById('tick_price_id').value = "";
-            document.getElementById('Margin_Amount_id').innerText = "0.0";
-            document.getElementById('Deposit_Amount_id').innerText = "0.0";
+            alert(board_lot_type);
+
             if (board_lot_type === '') {
                 alert(board_lot_type);
                 document.getElementById('tick_price_type_id').innerText = '';
@@ -314,6 +309,14 @@
                 alert(board_lot_type);
                 document.getElementById('tick_price_type_id').innerText = '元/' + board_lot_type;
             }
+
+            document.getElementById('Rate_id').value = product_rate;
+            document.getElementById('board_lot_id').innerText = board_lot;
+            document.getElementById('board_lot_type_1_id').innerText =board_lot_type;
+            document.getElementById('board_lot_type_2_id').innerText = board_lot_type_2;
+            document.getElementById('tick_price_id').value = "";
+            document.getElementById('Margin_Amount_id').innerText = "0.0";
+            document.getElementById('Deposit_Amount_id').innerText = "0.0";
         }
         </script>
 
