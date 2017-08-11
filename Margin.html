@@ -303,9 +303,11 @@
             document.getElementById('Margin_Amount_id').innerText = "0.0";
             document.getElementById('Deposit_Amount_id').innerText = "0.0";
             if (board_lot_type === '') {
+                alert(board_lot_type);
                 document.getElementById('tick_price_type_id').innerText = '';
             }
             else if (board_lot_type === '元') {
+                alert(board_lot_type);
                 document.getElementById('tick_price_type_id').innerText = '点';
             }
             else {
