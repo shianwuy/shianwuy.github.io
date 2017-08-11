@@ -295,18 +295,15 @@
                 board_lot_type_2 = "";
             }
 
-            alert(board_lot_type);
+            // alert(board_lot_type);
 
             if (board_lot_type === '') {
-                alert(board_lot_type);
                 document.getElementById('tick_price_type_id').innerText = '';
             }
             else if (board_lot_type === '元') {
-                alert(board_lot_type);
                 document.getElementById('tick_price_type_id').innerText = '点';
             }
             else {
-                alert(board_lot_type);
                 document.getElementById('tick_price_type_id').innerText = '元/' + board_lot_type;
             }
 
@@ -515,7 +512,7 @@
 
                             <td>
                                 <input type="text" name="tick_price" id="tick_price_id" style="width:100px; margin-left:0px;font-family:宋体;" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)"/>
-                                <label id="tick_price_type_id" style="margin-left:0px; font-size:15px; font-family:宋体;"></label>
+                                <label id="tick_price_type_id" style="margin-left:0px; font-size:15px; font-family:宋体;">元/T</label>
                             </td>
                         </tr>
 
