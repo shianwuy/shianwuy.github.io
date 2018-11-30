@@ -99,7 +99,7 @@
                 product_rate = '15';
             }
             else if (product_name === 'fu') {
-                board_lot = '50';
+                board_lot = '10';
                 board_lot_type = 'T';
                 product_rate = '16';
             }
@@ -310,11 +310,16 @@
                 board_lot_type = 'T';
                 product_rate = '17';
             }
-            else if (product_name === 'SC') {
+            else if (product_name === 'sc') {
                 board_lot = '1000';
                 board_lot_type = '桶';
-                product_rate = '13';
+                product_rate = '16';
             }
+			else if (product_name === 'sp') {
+			    board_lot = '10'
+				board_lot_type = 'T'
+				product_rate = '13'
+			}
 
             // alert(board_lot_type);
 
@@ -517,7 +522,8 @@
                                     <option value="IC">中证500 IC</option>
                                     <option value="CY">棉纱CY</option>
                                     <option value="AP">苹果AP</option>
-                                    <option value="SC">原油SC</option>
+                                    <option value="sc">原油sc</option>
+									<option value="sp">纸浆sp</option>
                                 </select>
                             </td>
                         </tr>
