@@ -35,16 +35,10 @@ td.result {
     font-weight: bold;    
 }
 
-#margin_value {
-    color: rgb(248, 72, 8);
-    font-weight: bold;
-    font-size: 13px;
-}
-
 tr {
     width: 100%;
     display: inline-table;
-    margin: 2px 0;
+    margin: 5px 0;
     border: 1px solid #999;
 }
 
@@ -94,4 +88,16 @@ input {
     border-bottom-style: groove;
     border-left-style: groove;
     border: 0px solid #a1a1a1;
+    height: 21px;
+    font-size: 18px;
+}
+
+input#margin_value {
+    color: rgb(248, 72, 8);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+select {
+    font-size: 18px;
 }
