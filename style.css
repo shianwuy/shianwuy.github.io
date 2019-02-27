@@ -1,0 +1,97 @@
+header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+header p {
+    font-family: Arial;
+    font-size: 25px;
+    margin: 5px auto;
+    color: white;
+    background-color: red;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%;
+    table-layout: fixed;
+    border: 1px;
+}
+
+td {
+    width: 33.333%;
+    padding: 5px;
+    text-align: left;
+}
+
+td.describe {
+    color: #C0C0C0;
+}
+
+td.result {
+    font-weight: bold;    
+}
+
+#margin_value {
+    color: rgb(248, 72, 8);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+tr {
+    width: 100%;
+    display: inline-table;
+    margin: 2px 0;
+    border: 1px solid #999;
+}
+
+.reset_button {
+    display: block;
+    margin: 0px auto;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #C0C0C0;
+    font-family: Arial;
+    color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.table-p {
+    text-align: right;
+    font-size: 10px;
+}
+
+#refer {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+#telphone {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+    color: orangered;
+}
+
+input {
+    border-radius: 5px;
+    outline: none;
+    border-top-style: groove;
+    border-right-style: groove;
+    border-bottom-style: groove;
+    border-left-style: groove;
+    border: 0px solid #a1a1a1;
+}

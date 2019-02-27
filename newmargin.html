@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>保证金计算</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script type="text/javascript" src="rem-fixed.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="support.js"></script>
+        <script src="product.js"></script>
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <p>保证金计算器</p>
+        </header>
+
+        <div>
+            <p id="refer">保证金比例不尽相同，更多详情请咨询</p>
+            <a href="tel:400-8888-933" id="telphone">400-8888-933</a>
+        </div>
+
+        <div>
+            <table>
+                <tr>
+                    <td class="describe">合约品种</td>
+                    <td>
+                        <select id="product" onchange="changeProduct(this.value)" style="width: 100%">
+                            <option value="default">--请选择--</option>
+                        </select>    
+                        <!-- <select id="contract" style="display: none; width: 100%;"></select> -->
+                    </td>
+                    <td style="width: 100px;">&nbsp;</td>
+                </tr>
+            
+                <tr>
+                    <td class="describe">合约乘数</td>
+                    <td>
+                        <input type="text" id="multiplier_value" value="" readonly />
+                    </td>
+                    <td style="width: 100px;">
+                        <label id="multiplier_type" style="text-align: left;">克/手</label>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="describe">行情价格</td>
+                    <td>
+                        <input type="text" id="price_value" onblur="clickInputTextBlur(this.id)" onfocus="clickInputTextFocus(this.id)" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)" />
+                    </td>
+                    <td style="width: 100px;">
+                        <label id="price_type" style="text-align: left;">元/克</label>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="describe">保证金比例</td>
+                    <td>
+                        <input type="text" id="rate_value" onblur="clickInputTextBlur(this.id)" onfocus="clickInputTextFocus(this.id)" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_tick_price(this.value)" />
+                    </td>
+                    <td style="width: 100px;">
+                        <label style="text-align: left;">%</label>
+                    </td>
+                </tr>
+            </table>
+            
+            <div><button class="reset_button" onclick="reset()">重置</button></div>
+            
+            <table>
+                <tr>
+                    <td class="result">所需保证金</td>
+                    <td>
+                        <input type="text" id="margin_value" value="" readonly />
+                    </td>
+                    <td style="width: 100px;">
+                        <label id="margin_type" style="text-align: left;">元/克</label>
+                    </td>
+                </tr>
+            </table>
+            <p class="table-p">数据截止时间: 2019.01.29</p>
+        </div>
+
+        <div style="text-align: left;">
+            <p style="font-size: 12px;"><b style="color: orangered; font-size: 16px;">温馨提示：</b>建议轻仓操作，期货总权益至少为保证金金额的2倍。保证金比例会根据交易所规定随时调整，以上测算数据仅供参考。实际数额以成交记录/保证金监控中心记录/结算单数据为准。</p>
+        </div>
+    </body>
+</html>
