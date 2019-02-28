@@ -6,8 +6,8 @@ contracts[2] = new Array("cu1903", "cu1904", "cu1905", "cu1906", "cu1907", "cu19
 var productInfoMap = new Map();
 
 $(document).ready(function() {
-    alert("ready function callback");
-    loadSHFEPrice();
+    // alert("ready function callback");
+    // loadSHFEPrice();
     pareProduct();
 });
 
