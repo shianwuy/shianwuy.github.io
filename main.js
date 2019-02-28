@@ -6,6 +6,7 @@ contracts[2] = new Array("cu1903", "cu1904", "cu1905", "cu1906", "cu1907", "cu19
 var productInfoMap = new Map();
 
 $(document).ready(function() {
+    alert("ready function callback");
     loadSHFEPrice();
     pareProduct();
 });
@@ -26,6 +27,7 @@ function loadSHFEPrice() {
     //         console.log(data.msg);
     //     }
     // })
+    alert("loadSHFEPrice function")
     var xmlhttp;
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();
@@ -46,7 +48,7 @@ function loadSHFEPrice() {
             console.log("no find data")
         }
     };
-    xmlhttp.open("GET", "http://www.shfe.com.cn/data/dailydata/kx/kx20190227.dat", true);
+    xmlhttp.open("GET", "https://www.shfe.com.cn/data/dailydata/kx/kx20190227.dat", true);
     xmlhttp.setRequestHeader("If-Modified-Since","0"); 
     xmlhttp.send();
 }
