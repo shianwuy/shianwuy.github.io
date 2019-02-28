@@ -6,13 +6,52 @@ contracts[2] = new Array("cu1903", "cu1904", "cu1905", "cu1906", "cu1907", "cu19
 var productInfoMap = new Map();
 
 $(document).ready(function() {
-    // alert("test");
+    loadSHFEPrice();
     pareProduct();
 });
 
-function pareProduct() {
-    // alert($.fn.jquery);
+function loadSHFEPrice() {
+    // //http://www.shfe.com.cn/data/dailydata/kx/kx20190227.dat
+    // $.ajax ({
+    //     url: "http://www.shfe.com.cn/statements/dataview.html?paramid=kx",
+    //     type: "GET",
+    //     dataType: "json",
+    //     crossDomain: true,
+    //     success: function (data) {
+    //         $.each(data.o_curinstrument, function (i, item) {
+    //             console.log(item.PRODUCTID);
+    //         })
+    //     },
+    //     error: function(data) {
+    //         console.log(data.msg);
+    //     }
+    // })
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
 
+    if (xmlhttp == null) {
+        alert("Your browser does not support XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var txt = xmlhttp.responseText;
+            // process txt
+            console.log(txt);
+        } else if (xmlhttp.readyState == 4 && xmlhttp.status == 404) {
+            // process nodata
+            console.log("no find data")
+        }
+    };
+    xmlhttp.open("GET", "http://www.shfe.com.cn/data/dailydata/kx/kx20190227.dat", true);
+    xmlhttp.setRequestHeader("If-Modified-Since","0"); 
+    xmlhttp.send();
+}
+
+function pareProduct() {
     var productEle = document.getElementById("product");
     for (var i in productList) {
         var item = productList[i];
@@ -81,8 +120,16 @@ function calcul_margin() {
 
     rateValue = rateValue / 100;
 
+    var productSelt = document.getElementById('product');
+    var index = productSelt.selectedIndex;
+    var productValue = productSelt[index].value;
+
     var marginValue = num_multi(multiplierValue, tickPrice);
     marginValue = num_multi(marginValue, rateValue);
+
+    if (productValue === 'jd') {
+        marginValue = num_multi(marginValue, 2);
+    }
 
     document.getElementById('margin_value').value = marginValue;
 }
