@@ -28,7 +28,7 @@ td {
 }
 
 td.describe {
-    color: #C0C0C0;
+    color: black;
 }
 
 td.result {
@@ -47,12 +47,13 @@ tr {
     margin: 0px auto;
     width: 100%;
     padding: 10px 10px;
-    background-color: #C0C0C0;
+    background-color: orange;
     font-family: Arial;
-    color: black;
+    color: white;
     border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .table-p {

@@ -28,8 +28,7 @@
                     <td>
                         <select id="product" onchange="changeProduct(this.value)" style="width: 100%">
                             <option value="default">--请选择--</option>
-                        </select>    
-                        <!-- <select id="contract" style="display: none; width: 100%;"></select> -->
+                        </select>
                     </td>
                     <td style="width: 100px;">&nbsp;</td>
                 </tr>
@@ -40,7 +39,7 @@
                         <input type="number" id="multiplier_value" value="" readonly />
                     </td>
                     <td style="width: 100px;">
-                        <label id="multiplier_type" style="text-align: left; font-size: 10px;">克/手</label>
+                        <label id="multiplier_type" style="text-align: left;">克/手</label>
                     </td>
                 </tr>
             
@@ -50,7 +49,7 @@
                         <input type="number" id="price_value" onblur="clickInputTextBlur(this.id)" onfocus="clickInputTextFocus(this.id)" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)" />
                     </td>
                     <td style="width: 100px;">
-                        <label id="price_type" style="text-align: left; font-size: 10px;">元/克</label>
+                        <label id="price_type" style="text-align: left;">元/克</label>
                     </td>
                 </tr>
             
@@ -60,7 +59,7 @@
                         <input type="number" id="rate_value" onblur="clickInputTextBlur(this.id)" onfocus="clickInputTextFocus(this.id)" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_tick_price(this.value)" />
                     </td>
                     <td style="width: 100px;">
-                        <label style="text-align: left; font-size: 10px;">%</label>
+                        <label style="text-align: left;">%</label>
                     </td>
                 </tr>
             </table>
@@ -74,7 +73,7 @@
                         <input type="number" id="margin_value" value="" readonly />
                     </td>
                     <td style="width: 100px;">
-                        <label id="margin_type" style="text-align: left; font-size: 10px;">元/克</label>
+                        <label id="margin_type" style="text-align: left;">元/克</label>
                     </td>
                 </tr>
             </table>
@@ -82,7 +81,7 @@
         </div>
 
         <div style="text-align: left;">
-            <p style="font-size: 12px;"><b style="color: orangered; font-size: 16px;">温馨提示：</b>建议轻仓操作，期货总权益至少为保证金金额的2倍。保证金比例会根据交易所规定随时调整，以上测算数据仅供参考。实际数额以成交记录/保证金监控中心记录/结算单数据为准。</p>
+            <p style="font-size: 16px;"><b style="color: orangered; font-size: 16px;">温馨提示：</b>建议轻仓操作，期货总权益至少为保证金金额的2倍。保证金比例会根据交易所规定随时调整，以上测算数据仅供参考。实际数额以成交记录/保证金监控中心记录/结算单数据为准。</p>
         </div>
     </body>
 </html>
