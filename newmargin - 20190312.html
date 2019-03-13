@@ -30,35 +30,35 @@
                             <option value="default">--请选择--</option>
                         </select>
                     </td>
-                    <td style="width: 15%;">&nbsp;</td>
+                    <td style="width: 100px;">&nbsp;</td>
                 </tr>
             
                 <tr>
-                    <td class="describe">合约乘数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td class="number">
+                    <td class="describe">合约乘数</td>
+                    <td>
                         <input type="number" id="multiplier_value" value="" readonly />
                     </td>
-                    <td class="unit">
+                    <td style="width: 100px;">
                         <label id="multiplier_type" style="text-align: left;">克/手</label>
                     </td>
                 </tr>
             
                 <tr>
-                    <td class="describe">行情价格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td class="number">
+                    <td class="describe">行情价格</td>
+                    <td>
                         <input type="number" id="price_value" onblur="clickInputTextBlur(this.id)" onfocus="clickInputTextFocus(this.id)" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)" />
                     </td>
-                    <td class="unit">
+                    <td style="width: 100px;">
                         <label id="price_type" style="text-align: left;">元/克</label>
                     </td>
                 </tr>
             
                 <tr>
                     <td class="describe">保证金比例</td>
-                    <td class="number">
+                    <td>
                         <input type="number" id="rate_value" onblur="clickInputTextBlur(this.id)" onfocus="clickInputTextFocus(this.id)" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_tick_price(this.value)" />
                     </td>
-                    <td class="unit">
+                    <td style="width: 100px;">
                         <label style="text-align: left;">%</label>
                     </td>
                 </tr>
@@ -69,10 +69,10 @@
             <table>
                 <tr>
                     <td class="result">所需保证金</td>
-                    <td class="number">
+                    <td>
                         <input type="number" id="margin_value" value="" readonly />
                     </td>
-                    <td class="unit">
+                    <td style="width: 100px;">
                         <label id="margin_type" style="text-align: left;">元/克</label>
                     </td>
                 </tr>
