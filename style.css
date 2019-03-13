@@ -23,26 +23,18 @@ table {
 
 td {
     /* width: 33.333%; */
+    width: 100px;
     padding: 5px;
     text-align: left;
 }
 
 td.describe {
-    width: 35%;
     color: black;
-}
-
-td.number {
-    width: 30%;
-}
-
-td.unit {
-    width: 35%;
 }
 
 td.result {
     font-weight: bold;   
-    width: 35%; 
+    width: 30%; 
 }
 
 tr {
