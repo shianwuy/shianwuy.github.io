@@ -93,6 +93,8 @@ input {
     border: 0px solid #a1a1a1;
     /* height: 21px; */
     font-size: 18px;
+    height: 100%;
+    width: 100%;
 }
 
 input#margin_value {
