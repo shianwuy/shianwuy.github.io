@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html>
     <head>
-    	<meta charset="utf-8" />
         <title>保证金计算</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <link rel="stylesheet" href="style.css"/>
@@ -9,7 +8,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="support.js"></script>
         <script src="product.js"></script>
-        <!--<script src="main.js"></script>-->
+        <script src="main.js"></script>
     </head>
 
     <body>
@@ -43,8 +42,7 @@
                         <label style="text-align: left;white-space:nowrap;">合约乘数</label>
                     </td>
                     <td>
-                        <!--<input type="number" id="multiplier_value" value="" readonly />-->
-                        <label id="multiplier_value"></label>
+                        <input type="number" id="multiplier_value" value="" readonly />
                     </td>
                     <td style="width: 100px;">
                         <label id="multiplier_type" style="text-align: left;white-space:nowrap;">克/手</label>
@@ -57,9 +55,7 @@
                         <label style="text-align: left;white-space:nowrap;">行情价格</label>
                     </td>
                     <td>
-                        <input type="number" id="price_value" onblur="clickInputTextBlur(this.id)" 
-                        	onfocus="clickInputTextFocus(this.id)" 
-                        	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)" />
+                        <input type="number" id="price_value" onblur="clickInputTextBlur(this.id)" onfocus="clickInputTextFocus(this.id)" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)" />
                     </td>
                     <td style="width: 100px;">
                         <label id="price_type" style="text-align: left;white-space:nowrap;">元/克</label>
@@ -72,9 +68,7 @@
                         <label style="text-align: left;white-space:nowrap;">保证金率</label>
                     </td>
                     <td>
-                        <input type="number" id="rate_value" onblur="clickInputTextBlur(this.id)" 
-                        	onfocus="clickInputTextFocus(this.id)" 
-                        	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_tick_price(this.value)" />
+                        <input type="number" id="rate_value" onblur="clickInputTextBlur(this.id)" onfocus="clickInputTextFocus(this.id)" onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_tick_price(this.value)" />
                     </td>
                     <td style="width: 100px;">
                         <label style="text-align: left;white-space:nowrap;">%</label>
@@ -91,20 +85,14 @@
                         <label style="text-align: left;white-space:nowrap;">所需保证金</label>
                     </td>
                     <td>
-                        <!--<input type="number" id="margin_value" value="" readonly />-->
-                        <label id="margin_value"></label>
+                        <input type="number" id="margin_value" value="" readonly />
                     </td>
                     <td style="width: 100px;">
                         <label id="margin_type" style="text-align: left;white-space:nowrap;">元/克</label>
                     </td>
                 </tr>
             </table>
-            <!--<p class="table-p">数据截止时间: 2019.01.29</p>-->
-            <p><b>
-            	<a href="https://m.stock.pingan.com/omm/mobile/comm/index.html?id=112&tab=5">
-            		点击查看全部品种保证金一览表
-            	</a>
-            </b></p>
+            <p class="table-p">数据截止时间: 2019.01.29</p>
         </div>
 
         <div style="text-align: left;">
