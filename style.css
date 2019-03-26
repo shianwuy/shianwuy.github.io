@@ -104,3 +104,8 @@ input#margin_value {
 select {
     font-size: 18px;
 }
+
+a:link {color: #FF0000;}
+a:visited{color: #FF0000;}
+a:hover{color: #FF0000;}
+a:active{color: #FF0000;}
