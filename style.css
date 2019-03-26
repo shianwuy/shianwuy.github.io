@@ -95,6 +95,9 @@ input {
     width: 100%;
     margin: 0px auto;
     padding: 0px 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 input#margin_value {
