@@ -22,8 +22,8 @@ table {
 }
 
 td {
-    /* width: 33.333%; */
-    width: 100px;
+    width: 33.333%;
+    /* width: 100px; */
     padding: 5px;
     text-align: left;
 }
@@ -34,7 +34,7 @@ td.describe {
 
 td.result {
     font-weight: bold;   
-    width: 30%; 
+    /* width: 30%;  */
 }
 
 tr {
@@ -85,13 +85,13 @@ tr {
 
 input {
     border-radius: 5px;
-    outline: none;
+    /* outline: none; */
     border-top-style: groove;
     border-right-style: groove;
     border-bottom-style: groove;
     border-left-style: groove;
     border: 0px solid #a1a1a1;
-    height: 21px;
+    /* height: 21px; */
     font-size: 18px;
 }
 

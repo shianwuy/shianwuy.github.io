@@ -27,7 +27,7 @@
                 <tr>
                     <td class="describe">
                         <!-- 合约品种 -->
-                        <label style="text-align: left;white-space:nowrap;">合约品种</label>
+                        <label style="text-align: left;white-space:nowrap;">合约品种&emsp;</label>
                     </td>
                     <td>
                         <select id="product" onchange="changeProduct(this.value)" style="width: 100%">
@@ -40,13 +40,12 @@
                 <tr>
                     <td class="describe">
                         <!-- 合约乘数 -->
-                        <label style="text-align: left;white-space:nowrap;">合约乘数</label>
+                        <label style="text-align: left;white-space:nowrap;">合约乘数&emsp;</label>
                     </td>
                     <td>
-                        <label id="multiplier_value"></label>
+                        <label id="multiplier_value" style="font-size: 18px"></label>
                     </td>
                     <td style="width: 100px;">
-                        <!-- <label id="multiplier_type" style="text-align: left;white-space:nowrap;">克/手</label> -->
                         <label id="multiplier_type" style="text-align: left;white-space:nowrap;"></label>
                     </td>
                 </tr>
@@ -54,7 +53,7 @@
                 <tr>
                     <td class="describe">
                         <!-- 行情价格 -->
-                        <label style="text-align: left;white-space:nowrap;">行情价格</label>
+                        <label style="text-align: left;white-space:nowrap;">行情价格&emsp;&emsp;</label>
                     </td>
                     <td>
                         <input type="number" id="price_value" min="0" max="999999" onblur="clickInputTextBlur(this.id)" 
@@ -62,7 +61,6 @@
                         	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)" />
                     </td>
                     <td style="width: 100px;">
-                        <!-- <label id="price_type" style="text-align: left;white-space:nowrap;">元/克</label> -->
                         <label id="price_type" style="text-align: left;white-space:nowrap;"></label>
                     </td>
                 </tr>
@@ -70,7 +68,9 @@
                 <tr>
                     <td class="describe">
                         <!-- 保证金比例 -->
-                        <label style="text-align: left;white-space:nowrap;">保证金率</label>
+                        <label style="text-align: left;white-space:nowrap;">
+                            保证金率&emsp;&emsp;
+                        </label>
                     </td>
                     <td>
                         <input type="number" id="rate_value" min="0" max="999999" onblur="clickInputTextBlur(this.id)" 
@@ -78,30 +78,25 @@
                         	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_product_rate(this.value)" />
                     </td>
                     <td style="width: 100px;">
-                        <!-- <label id="rate_type" style="text-align: left;white-space:nowrap;">%</label> -->
                         <label id="rate_type" style="text-align: left;white-space:nowrap;"></label>
                     </td>
                 </tr>
-            </table>
-            
-            <div><button class="reset_button" onclick="reset()">重置</button></div>
-            
-            <table>
+
                 <tr>
                     <td class="result">
                         <!-- 所需保证金 -->
                         <label style="text-align: left;white-space:nowrap;">所需保证金</label>
                     </td>
                     <td>
-                        <!--<input type="number" id="margin_value" value="" readonly />-->
-                        <label id="margin_value"></label>
+                        <label id="margin_value" style="font-size: 18px"></label>
                     </td>
                     <td style="width: 100px;">
-                        <!-- <label id="margin_type" style="text-align: left;white-space:nowrap;">元/克</label> -->
                         <label id="margin_type" style="text-align: left;white-space:nowrap;"></label>
                     </td>
                 </tr>
             </table>
+            
+            <div><button class="reset_button" onclick="reset()">重&emsp;置</button></div>
             <!--<p class="table-p">数据截止时间: 2019.01.29</p>-->
             <p><b>
             	<a href="https://m.stock.pingan.com/omm/mobile/comm/index.html?id=112&tab=5">
