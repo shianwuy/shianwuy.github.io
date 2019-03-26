@@ -107,11 +107,13 @@ function changeProduct(value) {
         document.getElementById('multiplier_type').innerText = item["multiplierType"];
         document.getElementById('price_type').innerText = item["priceType"];
         document.getElementById('rate_value').value = item["rateValue"];
+        document.getElementById('rate_type').innerText = '%';
         document.getElementById('margin_type').innerText = item["marginType"];
-
         document.getElementById('price_value').value = "";
         // document.getElementById('margin_value').value = "";
         document.getElementById('margin_value').innerText = "";
+    } else if (value === 'default') {
+        reset();
     }
 }
 
@@ -173,6 +175,7 @@ function reset() {
     document.getElementById('price_value').value = '';
     document.getElementById('price_type').innerText = '';
     document.getElementById('rate_value').value = '';
+    document.getElementById('rate_type').innerText = '';
     // document.getElementById('margin_value').value= '';
     document.getElementById('margin_value').innerText = '';
     document.getElementById('margin_type').innerText = '';
