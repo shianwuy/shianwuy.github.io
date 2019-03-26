@@ -72,22 +72,46 @@ function check_tick_price(price1) {
     if (isNaN(price)) {
         alert('请输入有效的数字')
         return false
+    } else if (price > 999999) {
+        document.getElementById('price_value').value = 999999;
+    } else if (price < 0) {
+        document.getElementById('price_value').value = 0;
+    } else {
+        document.getElementById('price_value').value = price;
     }
     calcul_margin();
+    return true
+}
+
+function check_product_rate(rate1) {
+    var rate = Number(rate1)
+    if (isNaN(rate)) {
+        alert('请输入有效的数字')
+        return false
+    } else if (rate > 100) {
+        document.getElementById('rate_value').value = 100
+    } else if (rate < 0) {
+        document.getElementById('rate_value').value = 0
+    } else {
+        document.getElementById('rate_value').value = rate
+    }
+    calcul_margin()
     return true
 }
 
 function changeProduct(value) {
     if (productInfoMap.has(value)) {
         var item = productInfoMap.get(value);
-        document.getElementById('multiplier_value').value = item["multiplier"];
+        // document.getElementById('multiplier_value').value = item["multiplier"];
+        document.getElementById('multiplier_value').innerHTML = item["multiplier"];
         document.getElementById('multiplier_type').innerText = item["multiplierType"];
         document.getElementById('price_type').innerText = item["priceType"];
         document.getElementById('rate_value').value = item["rateValue"];
         document.getElementById('margin_type').innerText = item["marginType"];
 
         document.getElementById('price_value').value = "";
-        document.getElementById('margin_value').value = "";
+        // document.getElementById('margin_value').value = "";
+        document.getElementById('margin_value').innerText = "";
     }
 }
 
@@ -108,7 +132,8 @@ function calcul_margin() {
         return false;
     }
 
-    var multiplierValue = Number(document.getElementById('multiplier_value').value);
+    // var multiplierValue = Number(document.getElementById('multiplier_value').value);
+    var multiplierValue = Number(document.getElementById('multiplier_value').innerText);
     if (isNaN(multiplierValue)) {
         alert('错误的合约乘数');
         return false;
@@ -133,7 +158,8 @@ function calcul_margin() {
         marginValue = num_multi(marginValue, 2);
     }
 
-    document.getElementById('margin_value').value = marginValue;
+    // document.getElementById('margin_value').value = marginValue;
+    document.getElementById('margin_value').innerText = marginValue;
 }
 
 function reset() {
@@ -141,11 +167,13 @@ function reset() {
     productEle[0].selected = true;
     productEle.style.display = "";
 
-    document.getElementById('multiplier_value').value = '';
+    // document.getElementById('multiplier_value').value = '';
+    document.getElementById('multiplier_value').innerText = '';
     document.getElementById('multiplier_type').innerText = '';
     document.getElementById('price_value').value = '';
     document.getElementById('price_type').innerText = '';
     document.getElementById('rate_value').value = '';
-    document.getElementById('margin_value').value= '';
+    // document.getElementById('margin_value').value= '';
+    document.getElementById('margin_value').innerText = '';
     document.getElementById('margin_type').innerText = '';
 }

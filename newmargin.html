@@ -9,7 +9,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="support.js"></script>
         <script src="product.js"></script>
-        <!--<script src="main.js"></script>-->
+        <script src="main.js"></script>
     </head>
 
     <body>
@@ -43,7 +43,6 @@
                         <label style="text-align: left;white-space:nowrap;">合约乘数</label>
                     </td>
                     <td>
-                        <!--<input type="number" id="multiplier_value" value="" readonly />-->
                         <label id="multiplier_value"></label>
                     </td>
                     <td style="width: 100px;">
@@ -57,7 +56,7 @@
                         <label style="text-align: left;white-space:nowrap;">行情价格</label>
                     </td>
                     <td>
-                        <input type="number" id="price_value" onblur="clickInputTextBlur(this.id)" 
+                        <input type="number" id="price_value" min="0" max="999999" onblur="clickInputTextBlur(this.id)" 
                         	onfocus="clickInputTextFocus(this.id)" 
                         	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)" />
                     </td>
@@ -72,9 +71,9 @@
                         <label style="text-align: left;white-space:nowrap;">保证金率</label>
                     </td>
                     <td>
-                        <input type="number" id="rate_value" onblur="clickInputTextBlur(this.id)" 
+                        <input type="number" id="rate_value" min="0" max="100" onblur="clickInputTextBlur(this.id)" 
                         	onfocus="clickInputTextFocus(this.id)" 
-                        	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_tick_price(this.value)" />
+                        	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_product_rate(this.value)" />
                     </td>
                     <td style="width: 100px;">
                         <label style="text-align: left;white-space:nowrap;">%</label>
