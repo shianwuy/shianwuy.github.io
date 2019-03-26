@@ -22,8 +22,7 @@ table {
 }
 
 td {
-    width: 33.333%;
-    /* width: 100px; */
+    /* width: 33.333%; */
     padding: 5px;
     text-align: left;
 }
@@ -34,7 +33,6 @@ td.describe {
 
 td.result {
     font-weight: bold;   
-    /* width: 30%;  */
 }
 
 tr {
