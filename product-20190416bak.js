@@ -1,5 +1,13 @@
 var productList = [
-	// shfe
+	{
+		"productID": "au",
+		"productName": "黄金",
+		"multiplier": 1000,
+		"multiplierType": "克/手",
+		"priceType": "元/克",
+		"marginType": "元/手",
+		"rateValue": 12
+	},
 	{
 		"productID": "cu",
 		"productName": "黄铜",
@@ -7,7 +15,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 14
 	},
 	{
 		"productID": "al",
@@ -25,7 +33,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 14
+		"rateValue": 15
 	},
 	{
 		"productID": "pb",
@@ -46,15 +54,6 @@ var productList = [
 		"rateValue": 16
 	},
 	{
-		"productID": "au",
-		"productName": "黄金",
-		"multiplier": 1000,
-		"multiplierType": "克/手",
-		"priceType": "元/克",
-		"marginType": "元/手",
-		"rateValue": 13
-	},	
-	{
 		"productID": "fu",
 		"productName": "燃料油",
 		"multiplier": 10,
@@ -70,7 +69,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 17
 	},
 	{
 		"productID": "wr",
@@ -79,7 +78,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 23
+		"rateValue": 15
 	},
 	{
 		"productID": "ag",
@@ -97,7 +96,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 17
+		"rateValue": 14
 	},
 	{
 		"productID": "hc",
@@ -106,7 +105,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 16
 	},
 	{
 		"productID": "ni",
@@ -115,7 +114,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 14
 	},
 	{
 		"productID": "sn",
@@ -127,33 +126,13 @@ var productList = [
 		"rateValue": 15
 	},
 	{
-		"productID": "sp",
-		"productName": "纸浆",
-		"multiplier": 10,
-		"multiplierType": "吨/手",
-		"priceType": "元/吨",
-		"marginType": "元/手",
-		"rateValue": 12
-	},
-	// ine
-	{
-		"productID": "sc",
-		"productName": "原油",
-		"multiplier": 1000,
-		"multiplierType": "桶/手",
-		"priceType": "元/桶",
-		"marginType": "元/手",
-		"rateValue": 16
-	},
-	// dce
-	{
 		"productID": "a",
 		"productName": "黄大豆",
 		"multiplier": 10,
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 13
 	},
 	{
 		"productID": "b",
@@ -162,7 +141,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 13
 	},
 	{
 		"productID": "c",
@@ -171,7 +150,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 10
+		"rateValue": 11
 	},
 	{
 		"productID": "cs",
@@ -180,7 +159,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 10
+		"rateValue": 11
 	},
 	{
 		"productID": "m",
@@ -189,7 +168,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 14
 	},
 	{
 		"productID": "y",
@@ -216,7 +195,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 13
 	},
 	{
 		"productID": "v",
@@ -225,7 +204,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 13
 	},
 	{
 		"productID": "j",
@@ -234,7 +213,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 17
 	},
 	{
 		"productID": "jm",
@@ -243,7 +222,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 17
 	},
 	{
 		"productID": "i",
@@ -252,7 +231,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 16
 	},
 	{
 		"productID": "jd",
@@ -261,7 +240,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/500千克",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 12
 	},
 	{
 		"productID": "bb",
@@ -270,7 +249,7 @@ var productList = [
 		"multiplierType": "张/手",
 		"priceType": "元/张",
 		"marginType": "元/手",
-		"rateValue": 23
+		"rateValue": 25
 	},
 	{
 		"productID": "fb",
@@ -279,7 +258,7 @@ var productList = [
 		"multiplierType": "张/手",
 		"priceType": "元/张",
 		"marginType": "元/手",
-		"rateValue": 35
+		"rateValue": 25
 	},
 	{
 		"productID": "pp",
@@ -288,18 +267,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
-	},
-	{
-		"productID": "eg",
-		"productName": "乙二醇",
-		"multiplier": 10,
-		"multiplierType": "吨/手",
-		"priceType": "元/吨",
-		"marginType": "元/手",
 		"rateValue": 13
 	},
-	// czce
 	{
 		"productID": "WH",
 		"productName": "强麦",
@@ -307,7 +276,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 24
+		"rateValue": 26
 	},
 	{
 		"productID": "RI",
@@ -316,7 +285,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20
+		"rateValue": 11
 	},
 	{
 		"productID": "LR",
@@ -325,7 +294,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20
+		"rateValue": 11
 	},
 	{
 		"productID": "CF",
@@ -334,7 +303,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 13
 	},
 	{
 		"productID": "SR",
@@ -343,7 +312,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12
+		"rateValue": 11
 	},
 	{
 		"productID": "TA",
@@ -361,7 +330,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 13
 	},
 	{
 		"productID": "MA",
@@ -370,7 +339,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 14
+		"rateValue": 13
 	},
 	{
 		"productID": "PM",
@@ -379,7 +348,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 21
+		"rateValue": 11
 	},
 	{
 		"productID": "FG",
@@ -388,7 +357,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 13
 	},
 	{
 		"productID": "RS",
@@ -397,7 +366,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 23
+		"rateValue": 26
 	},
 	{
 		"productID": "RM",
@@ -415,7 +384,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 16
 	},
 	{
 		"productID": "JR",
@@ -424,7 +393,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20
+		"rateValue": 11
 	},
 	{
 		"productID": "SF",
@@ -433,7 +402,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 13
 	},
 	{
 		"productID": "SM",
@@ -442,7 +411,61 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
+		"rateValue": 13
+	},
+	{
+		"productID": "IF",
+		"productName": "沪深300",
+		"multiplier": 300,
+		"multiplierType": "元/点",
+		"priceType": "点/手",
+		"marginType": "元/手",
 		"rateValue": 15
+	},
+	{
+		"productID": "TS",
+		"productName": "两年国债",
+		"multiplier": 20000,
+		"multiplierType": "百元",
+		"priceType": "元",
+		"marginType": "元/手",
+		"rateValue": 1.5
+	},
+	{
+		"productID": "TF",
+		"productName": "五年国债",
+		"multiplier": 10000,
+		"multiplierType": "百元",
+		"priceType": "元",
+		"marginType": "元/手",
+		"rateValue": 2.2
+	},
+	{
+		"productID": "T",
+		"productName": "十年国债",
+		"multiplier": 10000,
+		"multiplierType": "百元",
+		"priceType": "元",
+		"marginType": "元/手",
+		"rateValue": 3
+	},
+	{
+		"productID": "IH",
+		"productName": "上证50",
+		"multiplier": 300,
+		"multiplierType": "元/点",
+		"priceType": "点/手",
+		"marginType": "元/手",
+		"rateValue": 20
+	},
+	{
+		"productID": "IC",
+		"productName": "中证500",
+		"multiplier": 200,
+		"multiplierType": "元/点",
+		"priceType": "点/手",
+		"marginType": "元/手",
+		"rateValue": 20
 	},
 	{
 		"productID": "CY",
@@ -460,61 +483,33 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 14
 	},
-	// cffex
 	{
-		"productID": "IF",
-		"productName": "沪深300",
-		"multiplier": 300,
-		"multiplierType": "元/点",
-		"priceType": "点/手",
+		"productID": "sc",
+		"productName": "原油",
+		"multiplier": 1000,
+		"multiplierType": "桶/手",
+		"priceType": "元/桶",
+		"marginType": "元/手",
+		"rateValue": 16
+	},
+	{
+		"productID": "sp",
+		"productName": "纸浆",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
 		"marginType": "元/手",
 		"rateValue": 13
 	},
 	{
-		"productID": "IH",
-		"productName": "上证50",
-		"multiplier": 300,
-		"multiplierType": "元/点",
-		"priceType": "点/手",
+		"productID": "eg",
+		"productName": "乙二醇",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
 		"marginType": "元/手",
 		"rateValue": 13
-	},
-	{
-		"productID": "IC",
-		"productName": "中证500",
-		"multiplier": 200,
-		"multiplierType": "元/点",
-		"priceType": "点/手",
-		"marginType": "元/手",
-		"rateValue": 18
-	},
-	{
-		"productID": "TS",
-		"productName": "两年国债",
-		"multiplier": 20000,
-		"multiplierType": "元",
-		"priceType": "元",
-		"marginType": "元/手",
-		"rateValue": 1.0
-	},
-	{
-		"productID": "TF",
-		"productName": "五年国债",
-		"multiplier": 10000,
-		"multiplierType": "元",
-		"priceType": "元",
-		"marginType": "元/手",
-		"rateValue": 2.2
-	},
-	{
-		"productID": "T",
-		"productName": "十年国债",
-		"multiplier": 10000,
-		"multiplierType": "元",
-		"priceType": "元",
-		"marginType": "元/手",
-		"rateValue": 3
 	}
 ]
