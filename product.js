@@ -488,7 +488,7 @@ var productList = [
 		"multiplierType": "元/点",
 		"priceType": "点/手",
 		"marginType": "元/手",
-		"rateValue": 18
+		"rateValue": 15
 	},
 	{
 		"productID": "TS",
