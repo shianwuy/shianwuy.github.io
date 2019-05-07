@@ -462,6 +462,15 @@ var productList = [
 		"marginType": "元/手",
 		"rateValue": 15
 	},
+	{
+		"productID": "CJ",
+		"productName": "红枣",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 13
+	},
 	// cffex
 	{
 		"productID": "IF",
