@@ -143,7 +143,7 @@ var productList = [
 		"multiplierType": "桶/手",
 		"priceType": "元/桶",
 		"marginType": "元/手",
-		"rateValue": 16
+		"rateValue": 17
 	},
 	// dce
 	{
