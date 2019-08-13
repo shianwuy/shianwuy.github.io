@@ -145,6 +145,15 @@ var productList = [
 		"marginType": "元/手",
 		"rateValue": 17
 	},
+	{
+		"productID": "nr",
+		"productName": "20号胶",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 16
+	},
 	// dce
 	{
 		"productID": "a",
@@ -470,6 +479,15 @@ var productList = [
 		"priceType": "元/吨",
 		"marginType": "元/手",
 		"rateValue": 13
+	},
+	{
+		"productID": "UR",
+		"productName": "尿素",
+		"multiplier": 20,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 11
 	},
 	// cffex
 	{
