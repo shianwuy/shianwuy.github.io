@@ -308,6 +308,15 @@ var productList = [
 		"marginType": "元/手",
 		"rateValue": 13
 	},
+	{
+		"productID": "rr",
+		"productName": "粳米",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 11
+	},
 	// czce
 	{
 		"productID": "WH",
