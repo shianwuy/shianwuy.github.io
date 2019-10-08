@@ -357,7 +357,7 @@ var productList = [
 	{
 		"productID": "SR",
 		"productName": "白砂糖",
-		"multiplier": 5,
+		"multiplier": 10,
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
