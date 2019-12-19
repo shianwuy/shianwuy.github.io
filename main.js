@@ -213,8 +213,8 @@ function calcul_margin() {
 
             marginValue = marginValue + num_multi(tickPrice, multiplierValue)
 
-            document.getElementById('margin_value').innerText = marginValue
-            document.getElementById('otm_value').innerText = otmValue;
+            document.getElementById('margin_value').innerText = marginValue.toFixed(2)
+            document.getElementById('otm_value').innerText = otmValue.toFixed(2);
         }
         else if (productValue === 'IO-C') {
             var otmValue = num_multi(Math.max((indexPrice - strikePrice), 0), multiplierValue)
