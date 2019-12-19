@@ -67,33 +67,33 @@ function pareProduct() {
     }
 }
 
-function check_tick_price(price1) {
+function check_tick_price(control, price1) {
     var price = Number(price1)
     if (isNaN(price)) {
         alert('请输入有效的数字')
         return false
     } else if (price > 999999) {
-        document.getElementById('price_value').value = 999999;
+        document.getElementById(control).value = 999999;
     } else if (price < 0) {
-        document.getElementById('price_value').value = 0;
+        document.getElementById(control).value = 0;
     } else {
-        document.getElementById('price_value').value = price;
+        document.getElementById(control).value = price;
     }
     calcul_margin();
     return true
 }
 
-function check_product_rate(rate1) {
+function check_product_rate(control, rate1) {
     var rate = Number(rate1)
     if (isNaN(rate)) {
         alert('请输入有效的数字')
         return false
     } else if (rate > 100) {
-        document.getElementById('rate_value').value = 100
+        document.getElementById(control).value = 100
     } else if (rate < 0) {
-        document.getElementById('rate_value').value = 0
+        document.getElementById(control).value = 0
     } else {
-        document.getElementById('rate_value').value = rate
+        document.getElementById(control).value = rate
     }
     calcul_margin()
     return true
@@ -102,18 +102,44 @@ function check_product_rate(rate1) {
 function changeProduct(value) {
     if (productInfoMap.has(value)) {
         var item = productInfoMap.get(value);
-        // document.getElementById('multiplier_value').value = item["multiplier"];
-        document.getElementById('multiplier_value').innerHTML = item["multiplier"];
-        document.getElementById('multiplier_type').innerText = item["multiplierType"];
-        document.getElementById('price_type').innerText = item["priceType"];
-        document.getElementById('rate_value').value = item["rateValue"];
-        document.getElementById('rate_type').innerText = '%';
-        document.getElementById('margin_type').innerText = item["marginType"];
-        document.getElementById('price_value').value = "";
-        // document.getElementById('margin_value').value = "";
-        document.getElementById('margin_value').innerText = "";
+        if (value === "IO-P" || value === "IO-C") {
+            document.getElementById('strike_tr').style = ''//"display:block;"
+            document.getElementById('last_tr').style = ''//'display:block;'
+            document.getElementById('coefficient_tr').style = ''//'display:block;'
+            document.getElementById('otm_tr').style = ''//'display:block;'
+            
+            document.getElementById('strike_type').innerText = item['strike_type']
+            document.getElementById('last_type').innerText = item['last_type']
+            document.getElementById('coefficient_type').innerText = '%'
+            document.getElementById('coefficient_value').value = item['coefficient']
+            document.getElementById('otm_type').innerText = item['otm_type']
+        }
+        else {
+            document.getElementById('strike_tr').style = "display:none;"
+            document.getElementById('last_tr').style = 'display:none;'
+            document.getElementById('coefficient_tr').style = 'display:none;'
+            document.getElementById('otm_tr').style = 'display:none;'
+
+            document.getElementById('strike_type').innerText = ''
+            document.getElementById('strike_price').value = ''
+            document.getElementById('last_type').innerText = ''
+            document.getElementById('last_price').value = ''
+            document.getElementById('coefficient_type').innerText = ''
+            document.getElementById('coefficient_value').value = ''
+            document.getElementById('otm_type').innerText = ''
+            document.getElementById('otm_value').value = ''
+        }
+
+        document.getElementById('multiplier_value').innerHTML = item["multiplier"]
+        document.getElementById('multiplier_type').innerText = item["multiplierType"]
+        document.getElementById('price_type').innerText = item["priceType"]
+        document.getElementById('rate_value').value = item["rateValue"]
+        document.getElementById('rate_type').innerText = '%'
+        document.getElementById('margin_type').innerText = item["marginType"]
+        document.getElementById('price_value').value = ""
+        document.getElementById('margin_value').innerText = ""
     } else if (value === 'default') {
-        reset();
+        reset()
     }
 }
 
@@ -128,13 +154,17 @@ function clickInputTextBlur(value) {
 }
 
 function calcul_margin() {
+
+    var productSelt = document.getElementById('product');
+    var index = productSelt.selectedIndex;
+    var productValue = productSelt[index].value;
+
     var tickPrice = Number(document.getElementById('price_value').value);
     if (isNaN(tickPrice)) {
         alert('请输入有效的行情价格');
         return false;
     }
 
-    // var multiplierValue = Number(document.getElementById('multiplier_value').value);
     var multiplierValue = Number(document.getElementById('multiplier_value').innerText);
     if (isNaN(multiplierValue)) {
         alert('错误的合约乘数');
@@ -149,19 +179,70 @@ function calcul_margin() {
 
     rateValue = rateValue / 100;
 
-    var productSelt = document.getElementById('product');
-    var index = productSelt.selectedIndex;
-    var productValue = productSelt[index].value;
+    if (productValue === 'IO-P' || productValue === 'IO-C') {
+        var strikePrice = Number(document.getElementById('strike_price').value)
+        if (isNaN(strikePrice)) {
+            alert('请输入有效的行权价格')
+            return false
+        }
 
-    var marginValue = num_multi(multiplierValue, tickPrice);
-    marginValue = num_multi(marginValue, rateValue);
+        var indexPrice = Number(document.getElementById('last_price').value)
+        if (isNaN(indexPrice)) {
+            alert('请输入有效的指数价格')
+            return false
+        }
 
-    if (productValue === 'jd') {
-        marginValue = num_multi(marginValue, 2);
+        var coeffRate = Number(document.getElementById('coefficient_value').value)
+        if (isNaN(coeffRate)) {
+            alert('请输入有效的保障系数')
+            return false
+        }
+
+        coeffRate = coeffRate / 100
+
+        if (productValue === 'IO-P') {
+            var otmValue = num_multi(Math.max((strikePrice - indexPrice), 0), multiplierValue)
+            var marginValue = num_multi(indexPrice, multiplierValue)
+            marginValue = num_multi(marginValue, rateValue)
+            marginValue = marginValue - otmValue
+
+            var aa = num_multi(coeffRate, indexPrice)
+            aa = num_multi(aa, multiplierValue)
+            aa = num_multi(aa, rateValue)
+            marginValue = Math.max(marginValue, aa)
+
+            marginValue = marginValue + num_multi(tickPrice, multiplierValue)
+
+            document.getElementById('margin_value').innerText = marginValue
+            document.getElementById('otm_value').innerText = otmValue;
+        }
+        else if (productValue === 'IO-C') {
+            var otmValue = num_multi(Math.max((indexPrice - strikePrice), 0), multiplierValue)
+            var marginValue = num_multi(indexPrice, multiplierValue);
+            marginValue = num_multi(marginValue, rateValue)
+            marginValue = marginValue - otmValue
+
+            var aa = num_multi(coeffRate, indexPrice)
+            aa = num_multi(aa, multiplierValue)
+            aa = num_multi(aa, rateValue)
+            marginValue = Math.max(marginValue, aa)
+
+            marginValue = marginValue + num_multi(tickPrice, multiplierValue)
+
+            document.getElementById('margin_value').innerText = marginValue
+            document.getElementById('otm_value').innerText = otmValue
+        }
     }
-
-    // document.getElementById('margin_value').value = marginValue;
-    document.getElementById('margin_value').innerText = marginValue;
+    else {
+        var marginValue = num_multi(multiplierValue, tickPrice);
+        marginValue = num_multi(marginValue, rateValue);
+    
+        if (productValue === 'jd') {
+            marginValue = num_multi(marginValue, 2);
+        }
+    
+        document.getElementById('margin_value').innerText = marginValue;
+    }
 }
 
 function reset() {
@@ -169,14 +250,12 @@ function reset() {
     productEle[0].selected = true;
     productEle.style.display = "";
 
-    // document.getElementById('multiplier_value').value = '';
     document.getElementById('multiplier_value').innerText = '';
     document.getElementById('multiplier_type').innerText = '';
     document.getElementById('price_value').value = '';
     document.getElementById('price_type').innerText = '';
     document.getElementById('rate_value').value = '';
     document.getElementById('rate_type').innerText = '';
-    // document.getElementById('margin_value').value= '';
     document.getElementById('margin_value').innerText = '';
     document.getElementById('margin_type').innerText = '';
 }

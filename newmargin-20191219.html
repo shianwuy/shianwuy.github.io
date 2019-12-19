@@ -5,6 +5,7 @@
         <title>保证金计算</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <link rel="stylesheet" href="style.css"/>
+        <!-- <script type="text/javascript" src="rem-fixed.js"></script> -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="support.js"></script>
         <script src="product.js"></script>
@@ -23,8 +24,9 @@
 
         <div>
             <table>
-                <tr> <!-- 合约品种 -->
+                <tr>
                     <td class="describe" width="30%">
+                        <!-- 合约品种 -->
                         <label style="text-align: left;white-space:nowrap;">合约品种&emsp;</label>
                     </td>
                     <td width="30%">
@@ -35,8 +37,9 @@
                     <td width="30%">&nbsp;</td>
                 </tr>
             
-                <tr> <!-- 合约乘数 -->
+                <tr>
                     <td class="describe" width="30%">
+                        <!-- 合约乘数 -->
                         <label style="text-align: left;white-space:nowrap;">合约乘数&emsp;</label>
                     </td>
                     <td width="30%">
@@ -47,99 +50,46 @@
                     </td>
                 </tr>
             
-                <tr> <!-- 行情价格 -->
+                <tr>
                     <td class="describe" width="30%">
+                        <!-- 行情价格 -->
                         <label style="text-align: left;white-space:nowrap;">行情价格</label>
                     </td>
                     <td width="30%">
-                        <input type="number" id="price_value" min="0" max="999999" 
-                            onblur="clickInputTextBlur(this.id)" 
+                        <input type="number" id="price_value" min="0" max="999999" onblur="clickInputTextBlur(this.id)" 
                         	onfocus="clickInputTextFocus(this.id)" 
-                        	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.id, this.value)" />
+                        	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.value)" />
                     </td>
                     <td width="30%">
                         <label id="price_type" style="text-align: left;white-space:nowrap;"></label>
                     </td>
                 </tr>
-
-                <tr id="strike_tr" style="display: none;"> <!-- 行权价格 -->
-                    <td class="describe" width="30%">
-                        <label style="text-align: left;white-space:nowrap;">行权价格</label>
-                    </td>
-                    <td width="30%">
-                        <input type="number" id="strike_price" min="0" max="999999" 
-                            onblur="clickInputTextBlur(this.id)"
-                            onfocus="clickInputTextFocus(this.id)"
-                            onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.id, this.value)" />
-                    </td>
-                    <td width="30%">
-                        <label id="strike_type" style="text-align: left;white-space: nowrap;"></label>
-                    </td>
-                </tr>
-
-                <tr id="last_tr" style="display: none;"> <!-- 指数价格  -->
-                    <td class="describe" width="30%">
-                        <label style="text-align: left;white-space: nowrap;">指数价格</label>
-                    </td>
-                    <td width="30%">
-                        <input type="number" id="last_price" min="0" max="999999" 
-                            onblur="clickInputTextBlur(this.id)"
-                            onfocus="clickInputTextFocus(this.id)"
-                            onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.id, this.value)" />
-                    </td>
-                    <td width="30%">
-                        <label id="last_type" style="text-align: left;white-space: nowrap;"></label>
-                    </td>
-                </tr>
             
-                <tr> <!-- 保证金率 -->
+                <tr>
                     <td class="describe" width="30%">
+                        <!-- 保证金比例 -->
                         <label style="text-align: left;white-space:nowrap;">保证金率</label>
                     </td>
                     <td width="30%">
                         <input type="number" id="rate_value" min="0" max="999999" onblur="clickInputTextBlur(this.id)" 
                         	onfocus="clickInputTextFocus(this.id)" 
-                        	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_product_rate(this.id, this.value)" />
+                        	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_product_rate(this.value)" />
                     </td>
+                    <!-- <td style="width: 100px;" > -->
                     <td width="30%">
                         <label id="rate_type" style="text-align: left;white-space:nowrap;"></label>
                     </td>
                 </tr>
 
-                <tr id="coefficient_tr" style="display: none;"> <!-- 保障系数  -->
-                    <td class="describe" width="30%">
-                        <label style="text-align: left;white-space: nowrap;">保障系数</label>
-                    </td>
-                    <td width="30%">
-                        <input type="number" id="coefficient_value" min="0" max="999999" 
-                            onblur="clickInputTextBlur(this.id)" 
-                        	onfocus="clickInputTextFocus(this.id)" 
-                        	onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g, ''); check_product_rate(this.id, this.value)" />
-                    </td>
-                    <td width="30%">
-                        <label id="coefficient_type" style="text-align:left;white-space: nowrap;"></label>
-                    </td>
-                </tr>
-
-                <tr id="otm_tr" style="display: none;"> <!-- 虚值额  -->
+                <tr>
                     <td class="result" width="30%">
-                        <label style="text-align: left;white-space: nowrap;">虚值额</label>
-                    </td>
-                    <td width="30%">
-                        <label id="otm_value" style="font-size: 18px;"></label>
-                    </td>
-                    <td width="30%">
-                        <label id="otm_type" style="text-align: left;white-space: nowrap;"></label>
-                    </td>
-                </tr>
-
-                <tr> <!-- 所需保证金 -->
-                    <td class="result" width="30%">
+                        <!-- 所需保证金 -->
                         <label style="text-align: left;white-space:nowrap;">所需保证金</label>
                     </td>
                     <td width="30%">
                         <label id="margin_value" style="font-size: 18px"></label>
                     </td>
+                    <!-- <td style="width: 100px;"> -->
                     <td width="30%">
                         <label id="margin_type" style="text-align: left;white-space:nowrap;"></label>
                     </td>
@@ -147,6 +97,7 @@
             </table>
             
             <div><button class="reset_button" onclick="reset()">重&emsp;置</button></div>
+            <!--<p class="table-p">数据截止时间: 2019.01.29</p>-->
             <p><b>
             	<a href="https://mp.weixin.qq.com/s/zaFynEDXTbM6bnzOPsB0Uw">
             		点击查看全部品种保证金一览表

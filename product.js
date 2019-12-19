@@ -552,5 +552,32 @@ var productList = [
 		"priceType": "元",
 		"marginType": "元/手",
 		"rateValue": 3
+	},
+	{
+		"productID": "IO-P",
+		"productName": "沪深300看涨期权",
+		"multiplier": 100,
+		"multiplierType": "元/点",
+		"priceType": "点/手",
+		"marginType": "元/手",
+		"rateValue": 10,
+		"coefficient": 50,
+		'strike_type': "元/点",
+		'last_type': "元/点",
+		'otm_type': '元/点'
+	}
+	,
+	{
+		"productID": "IO-C",
+		"productName": "沪深300看跌期权",
+		"multiplier": 100,
+		"multiplierType": "元/点",
+		"priceType": "点/手",
+		"marginType": "元/手",
+		"rateValue": 10,
+		"coefficient": 50,
+		'strike_type': "元/点",
+		'last_type': "元/点",
+		'otm_type': '元/点'
 	}
 ]
