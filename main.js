@@ -8,7 +8,7 @@ var productInfoMap = new Map();
 $(document).ready(function() {
     // alert("ready function callback");
     // loadSHFEPrice();
-    pareProduct();
+    pareProduct("");
 });
 
 function loadSHFEPrice() {
@@ -53,13 +53,12 @@ function loadSHFEPrice() {
     xmlhttp.send();
 }
 
-function pareProduct() {
+function pareProduct(value) {
     var productEle = document.getElementById("product")
     productEle.length = 1
     for (var i in productList) {
         var item = productList[i]
-        var productType = document.getElementById("product_type").value
-        if (item["product_type"] === productType) {
+        if (item["product_type"] === value) {
             var textNode = document.createTextNode(item["productName"])
             var opEle = document.createElement("option")
             opEle.appendChild(textNode)
@@ -71,7 +70,7 @@ function pareProduct() {
 }
 
 function changeproducttype(value) {
-    pareProduct()
+    pareProduct(value)
     if (value == "futures") {
         // hide table's row
         document.getElementById("strike_tr").style = "display:none;"
@@ -92,7 +91,9 @@ function changeproducttype(value) {
 }
 
 function calcul_margin() {
-    var producttype = document.getElementById("product_type").value
+    var producttypes = document.getElementById("product_type")
+    var index = producttypes.selectedIndex;
+    var producttype = producttypes[index].value
     if (producttype === "futures") {
         futures_margin()
     }
@@ -189,7 +190,11 @@ function check_input_value() {
         return false
     }
 
-    if (document.getElementById("product_type").value === "options") {
+    var producttypes = document.getElementById("product_type")
+    var index = producttypes.selectedIndex;
+    var producttype = producttypes[index].value
+
+    if (producttype === "options") {
         var strikePrice = Number(document.getElementById('strike_price').value)
         if (isNaN(strikePrice)) {
             alert('请输入有效的行权价格')
@@ -202,7 +207,7 @@ function check_input_value() {
             return false
         }
     }
-    else if (document.getElementById("product_type").value === "spotoption") {
+    else if (producttype === "spotoption") {
         var coeffRate = Number(document.getElementById('coefficient_value').value)
         if (isNaN(coeffRate)) {
             alert('请输入有效的保障系数')
