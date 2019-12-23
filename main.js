@@ -54,16 +54,53 @@ function loadSHFEPrice() {
 }
 
 function pareProduct() {
-    var productEle = document.getElementById("product");
+    var productEle = document.getElementById("product")
+    productEle.length = 1
     for (var i in productList) {
-        var item = productList[i];
-        var textNode = document.createTextNode(item["productName"]);
-        var opEle = document.createElement("option");
-        opEle.appendChild(textNode);
-        opEle.value = item["productID"];
-        productEle.appendChild(opEle);
-
+        var item = productList[i]
+        var productType = document.getElementById("product_type").value
+        if (item["product_type"] === productType) {
+            var textNode = document.createTextNode(item["productName"])
+            var opEle = document.createElement("option")
+            opEle.appendChild(textNode)
+            opEle.value = item["productID"]
+            productEle.appendChild(opEle)
+        }
         productInfoMap.set(item["productID"], item);
+    }
+}
+
+function changeproducttype(value) {
+    pareProduct()
+    if (value == "futures") {
+        // hide table's row
+        document.getElementById("strike_tr").style = "display:none;"
+        document.getElementById("last_tr").style = "display:none;"
+        document.getElementById("coefficient_tr").style = "display:none;"
+        document.getElementById("otm_tr").style = "display:none;"
+    }
+    else {
+        // show table's row
+        document.getElementById('strike_tr').style = ''
+        document.getElementById("last_tr").style = ''
+        document.getElementById("otm_tr").style = ''
+        if (value == "spotoption") {
+            document.getElementById("coefficient_tr").style = ''
+        }
+    }
+    reset()
+}
+
+function calcul_margin() {
+    var producttype = document.getElementById("product_type").value
+    if (producttype === "futures") {
+        futures_margin()
+    }
+    else if (producttype === 'options') {
+        options_margin()
+    }
+    else if (producttype === 'spotoption') {
+        spotoption_margin()
     }
 }
 
@@ -79,7 +116,7 @@ function check_tick_price(control, price1) {
     } else {
         document.getElementById(control).value = price;
     }
-    calcul_margin();
+    calcul_margin()
     return true
 }
 
@@ -99,48 +136,28 @@ function check_product_rate(control, rate1) {
     return true
 }
 
-function changeProduct(value) {
-    if (productInfoMap.has(value)) {
-        var item = productInfoMap.get(value);
-        if (value === "IO-P" || value === "IO-C") {
-            document.getElementById('strike_tr').style = ''//"display:block;"
-            document.getElementById('last_tr').style = ''//'display:block;'
-            document.getElementById('coefficient_tr').style = ''//'display:block;'
-            document.getElementById('otm_tr').style = ''//'display:block;'
-            
-            document.getElementById('strike_type').innerText = item['strike_type']
-            document.getElementById('last_type').innerText = item['last_type']
-            document.getElementById('coefficient_type').innerText = '%'
-            document.getElementById('coefficient_value').value = item['coefficient']
-            document.getElementById('otm_type').innerText = item['otm_type']
-        }
-        else {
-            document.getElementById('strike_tr').style = "display:none;"
-            document.getElementById('last_tr').style = 'display:none;'
-            document.getElementById('coefficient_tr').style = 'display:none;'
-            document.getElementById('otm_tr').style = 'display:none;'
+function changeproduct(value) {
+    if (value === "default") reset()
+    if (productInfoMap.has(value) === false) return
 
-            document.getElementById('strike_type').innerText = ''
-            document.getElementById('strike_price').value = ''
-            document.getElementById('last_type').innerText = ''
-            document.getElementById('last_price').value = ''
-            document.getElementById('coefficient_type').innerText = ''
-            document.getElementById('coefficient_value').value = ''
-            document.getElementById('otm_type').innerText = ''
-            document.getElementById('otm_value').value = ''
-        }
+    page_clear()
 
-        document.getElementById('multiplier_value').innerHTML = item["multiplier"]
-        document.getElementById('multiplier_type').innerText = item["multiplierType"]
-        document.getElementById('price_type').innerText = item["priceType"]
-        document.getElementById('rate_value').value = item["rateValue"]
-        document.getElementById('rate_type').innerText = '%'
-        document.getElementById('margin_type').innerText = item["marginType"]
-        document.getElementById('price_value').value = ""
-        document.getElementById('margin_value').innerText = ""
-    } else if (value === 'default') {
-        reset()
-    }
+    var item = productInfoMap.get(value)
+    document.getElementById("multiplier_value").innerHTML = item["multiplier"]
+    document.getElementById("multiplier_type").innerHTML = item["multiplierType"]
+    document.getElementById("price_type").innerText = item["priceType"]
+    document.getElementById("rate_value").value = item["rateValue"]
+    document.getElementById("rate_type").innerText = "%"
+    document.getElementById("margin_type").innerText = item["marginType"]
+    document.getElementById("price_value").value = ""
+    document.getElementById("margin_value").innerText = ""
+
+    document.getElementById("strike_type").innerText = item["strike_type"]
+    document.getElementById("last_type").innerText = item["last_type"]
+
+    document.getElementById("coefficient_type").innerText = "%"
+    document.getElementById("coefficient_value").value = item["coefficient"]
+    document.getElementById("otm_type").innerText = item["otm_type"]
 }
 
 function clickInputTextFocus(value) {
@@ -153,33 +170,26 @@ function clickInputTextBlur(value) {
     textEle.style.border = "0px solid #a1a1a1";
 }
 
-function calcul_margin() {
-
-    var productSelt = document.getElementById('product');
-    var index = productSelt.selectedIndex;
-    var productValue = productSelt[index].value;
-
-    var tickPrice = Number(document.getElementById('price_value').value);
-    if (isNaN(tickPrice)) {
-        alert('请输入有效的行情价格');
-        return false;
+function check_input_value() {
+    var tickprice = Number(document.getElementById("price_value").value)
+    if (isNaN(tickprice)) {
+        alert("请输入有效的行情价格")
+        return false
     }
 
-    var multiplierValue = Number(document.getElementById('multiplier_value').innerText);
-    if (isNaN(multiplierValue)) {
-        alert('错误的合约乘数');
-        return false;
+    var multip = Number(document.getElementById("multiplier_value").innerText)
+    if (isNaN(multip)) {
+        alert("错误的合约乘数")
+        return false
     }
 
-    var rateValue = Number(document.getElementById('rate_value').value);
-    if (isNaN(rateValue)) {
-        alert('请输入有效的保证金率');
-        return false;
+    var ratevalue = Number(document.getElementById("rate_value").value)
+    if (isNaN(ratevalue)) {
+        alert("请输入有效的保证金率")
+        return false
     }
 
-    rateValue = rateValue / 100;
-
-    if (productValue === 'IO-P' || productValue === 'IO-C') {
+    if (document.getElementById("product_type").value === "options") {
         var strikePrice = Number(document.getElementById('strike_price').value)
         if (isNaN(strikePrice)) {
             alert('请输入有效的行权价格')
@@ -188,68 +198,117 @@ function calcul_margin() {
 
         var indexPrice = Number(document.getElementById('last_price').value)
         if (isNaN(indexPrice)) {
-            alert('请输入有效的指数价格')
+            alert('请输入有效的标的物价格')
             return false
         }
-
+    }
+    else if (document.getElementById("product_type").value === "spotoption") {
         var coeffRate = Number(document.getElementById('coefficient_value').value)
         if (isNaN(coeffRate)) {
             alert('请输入有效的保障系数')
             return false
         }
-
-        coeffRate = coeffRate / 100
-
-        if (productValue === 'IO-P') {
-            var otmValue = num_multi(Math.max((strikePrice - indexPrice), 0), multiplierValue)
-            var marginValue = num_multi(indexPrice, multiplierValue)
-            marginValue = num_multi(marginValue, rateValue)
-            marginValue = marginValue - otmValue
-
-            var aa = num_multi(coeffRate, indexPrice)
-            aa = num_multi(aa, multiplierValue)
-            aa = num_multi(aa, rateValue)
-            marginValue = Math.max(marginValue, aa)
-
-            marginValue = marginValue + num_multi(tickPrice, multiplierValue)
-
-            document.getElementById('margin_value').innerText = marginValue.toFixed(2)
-            document.getElementById('otm_value').innerText = otmValue.toFixed(2);
-        }
-        else if (productValue === 'IO-C') {
-            var otmValue = num_multi(Math.max((indexPrice - strikePrice), 0), multiplierValue)
-            var marginValue = num_multi(indexPrice, multiplierValue);
-            marginValue = num_multi(marginValue, rateValue)
-            marginValue = marginValue - otmValue
-
-            var aa = num_multi(coeffRate, indexPrice)
-            aa = num_multi(aa, multiplierValue)
-            aa = num_multi(aa, rateValue)
-            marginValue = Math.max(marginValue, aa)
-
-            marginValue = marginValue + num_multi(tickPrice, multiplierValue)
-
-            document.getElementById('margin_value').innerText = marginValue
-            document.getElementById('otm_value').innerText = otmValue
-        }
     }
-    else {
-        var marginValue = num_multi(multiplierValue, tickPrice);
-        marginValue = num_multi(marginValue, rateValue);
-    
-        if (productValue === 'jd') {
-            marginValue = num_multi(marginValue, 2);
-        }
-    
-        document.getElementById('margin_value').innerText = marginValue;
-    }
+
+    return true
 }
 
-function reset() {
-    var productEle = document.getElementById("product");
-    productEle[0].selected = true;
-    productEle.style.display = "";
+function futures_margin() {
+    if (check_input_value() === false) return
 
+    var productname = document.getElementById("product")
+    var index = productname.selectedIndex;
+    var contractname = productname[index].value
+
+    var tickPrice = Number(document.getElementById('price_value').value)
+    var multiplierValue = Number(document.getElementById('multiplier_value').innerText)
+    var rateValue = Number(document.getElementById('rate_value').value)
+    rateValue = rateValue / 100
+
+    var marginValue = num_multi(multiplierValue, tickPrice)
+    marginValue = num_multi(marginValue, rateValue)
+    if (contractname === "jd") {
+        marginValue = num_multi(marginValue, 2)
+    }
+
+    document.getElementById("margin_value").innerText = marginValue
+}
+
+function options_margin() {
+    if (check_input_value() === false) return
+
+    var productname = document.getElementById("product")
+    var index = productname.selectedIndex;
+    var contractname = productname[index].value
+    var item = productInfoMap.get(contractname)
+
+    var tickPrice = Number(document.getElementById('price_value').value)
+    var multiplierValue = Number(document.getElementById('multiplier_value').innerText)
+    var rateValue = Number(document.getElementById('rate_value').value)
+    rateValue = rateValue / 100
+    var strikePrice = Number(document.getElementById('strike_price').value)
+    var contractPrice = Number(document.getElementById('last_price').value)
+
+    var fuMargin = num_multi(multiplierValue, contractPrice)
+    fuMargin = num_multi(fuMargin, rateValue)
+
+    var otmValue = 0
+    if (item["options_type"] === "C") {
+        otmValue = Math.max((strikePrice - contractPrice), 0)
+    }
+    else {
+        otmValue = Math.max((contractPrice - strikePrice), 0)
+    }
+    otmValue = num_multi(otmValue, multiplierValue)
+
+    var way1 = num_multi(tickPrice, multiplierValue) + fuMargin - num_multi(otmValue, 0.5)
+    var way2 = num_multi(tickPrice, multiplierValue) + num_multi(fuMargin, 0.5)
+
+    var marginValue = Math.max(way1, way2)
+    document.getElementById("margin_value").innerText = marginValue
+    document.getElementById("otm_value").innerText = otmValue
+}
+
+function spotoption_margin() {
+    if (check_input_value() === false) return
+
+    var productname = document.getElementById("product")
+    var index = productname.selectedIndex;
+    var contractname = productname[index].value
+
+    var tickPrice = Number(document.getElementById('price_value').value)
+    var multiplierValue = Number(document.getElementById('multiplier_value').innerText)
+    var rateValue = Number(document.getElementById('rate_value').value)
+    rateValue = rateValue / 100
+    var strikePrice = Number(document.getElementById('strike_price').value)
+    var indexPrice = Number(document.getElementById('last_price').value)
+    var coeffRate = Number(document.getElementById('coefficient_value').value)
+    coeffRate = coeffRate / 100
+
+    var marginValue = num_multi(indexPrice, multiplierValue)
+    marginValue = num_multi(marginValue, rateValue)
+
+    var aa = num_multi(coeffRate, indexPrice)
+    aa = num_multi(aa, multiplierValue)
+    aa = num_multi(aa, rateValue)
+
+    var otmValue = multiplierValue
+    if (contractname === "IO-P") {
+        otmValue = num_multi(Math.max((strikePrice - indexPrice), 0), otmValue)
+    }
+    else {
+        otmValue = num_multi(Math.max((indexPrice - strikePrice), 0), otmValue)
+    }
+
+    marginValue = marginValue - otmValue
+    marginValue = Math.max(marginValue, aa)
+    marginValue = marginValue + num_multi(tickPrice, multiplierValue)
+
+    document.getElementById("margin_value").innerText = marginValue.toFixed(2)
+    document.getElementById("otm_value").innerText = otmValue.toFixed(2)
+}
+
+function page_clear() {
     document.getElementById('multiplier_value').innerText = '';
     document.getElementById('multiplier_type').innerText = '';
     document.getElementById('price_value').value = '';
@@ -258,4 +317,20 @@ function reset() {
     document.getElementById('rate_type').innerText = '';
     document.getElementById('margin_value').innerText = '';
     document.getElementById('margin_type').innerText = '';
+    document.getElementById("strike_price").value = ''
+    document.getElementById("strike_type").innerText = ''
+    document.getElementById("last_price").value = ''
+    document.getElementById("last_type").innerText = ''
+    document.getElementById('coefficient_value').value = ''
+    document.getElementById('coefficient_type').innerText = ''
+    document.getElementById('otm_value').value = ''
+    document.getElementById('otm_type').innerText = ''
+}
+
+function reset() {
+    var productEle = document.getElementById("product");
+    productEle[0].selected = true;
+    productEle.style.display = "";
+
+    page_clear()
 }

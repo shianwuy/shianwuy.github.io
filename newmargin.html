@@ -27,12 +27,19 @@
                     <td class="describe" width="30%">
                         <label style="text-align: left;white-space:nowrap;">合约品种&emsp;</label>
                     </td>
-                    <td width="30%">
-                        <select id="product" onchange="changeProduct(this.value)" style="width: 100%">
+                    <td width="10%">
+                        <select id="product_type" onchange="changeproducttype(this.value)" style="width: 100%;">
+                            <option value="futures">期货</option>
+                            <option value="options">期货期权</option>
+                            <option value="spotoption">现货期权</option>
+                        </select>
+                    </td>
+                    <td width="45%">
+                        <select id="product" onchange="changeproduct(this.value)" style="width: 100%;">
                             <option value="default">--请选择--</option>
                         </select>
                     </td>
-                    <td width="30%">&nbsp;</td>
+                    <td width="15%">&nbsp;</td>
                 </tr>
             
                 <tr> <!-- 合约乘数 -->
@@ -47,9 +54,9 @@
                     </td>
                 </tr>
             
-                <tr> <!-- 行情价格 onkeyup="this.value=this.value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,''); check_tick_price(this.id, this.value)" /> -->
+                <tr> <!-- 行情价格 -->
                     <td class="describe" width="30%">
-                        <label style="text-align: left;white-space:nowrap;">行情价格</label>
+                        <label style="text-align: left;white-space:nowrap;">最新价</label>
                     </td>
                     <td width="30%">
                         <input type="number" id="price_value" min="0" max="999999" 
@@ -79,7 +86,7 @@
 
                 <tr id="last_tr" style="display: none;"> <!-- 指数价格  -->
                     <td class="describe" width="30%">
-                        <label style="text-align: left;white-space: nowrap;">指数价格</label>
+                        <label style="text-align: left;white-space: nowrap;">标的价格</label>
                     </td>
                     <td width="30%">
                         <input type="number" id="last_price" min="0" max="999999" 

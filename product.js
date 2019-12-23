@@ -7,7 +7,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 13,
+		"product_type":"futures"
 	},
 	{
 		"productID": "al",
@@ -16,7 +17,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 13,
+		"product_type":"futures"
 	},
 	{
 		"productID": "zn",
@@ -25,7 +27,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 14
+		"rateValue": 14,
+		"product_type":"futures"
 	},
 	{
 		"productID": "pb",
@@ -34,7 +37,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 14
+		"rateValue": 14,
+		"product_type":"futures"
 	},
 	{
 		"productID": "ru",
@@ -43,7 +47,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 16
+		"rateValue": 16,
+		"product_type":"futures"
 	},
 	{
 		"productID": "au",
@@ -52,7 +57,8 @@ var productList = [
 		"multiplierType": "克/手",
 		"priceType": "元/克",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 13,
+		"product_type":"future"
 	},	
 	{
 		"productID": "fu",
@@ -61,7 +67,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 16
+		"rateValue": 16,
+		"product_type":"futures"
 	},
 	{
 		"productID": "rb",
@@ -70,7 +77,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "wr",
@@ -79,7 +87,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 23
+		"rateValue": 23,
+		"product_type":"futures"
 	},
 	{
 		"productID": "ag",
@@ -88,7 +97,8 @@ var productList = [
 		"multiplierType": "千克/手",
 		"priceType": "元/千克",
 		"marginType": "元/手",
-		"rateValue": 14
+		"rateValue": 14,
+		"product_type":"futures"
 	},
 	{
 		"productID": "bu",
@@ -97,7 +107,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 17
+		"rateValue": 17,
+		"product_type":"futures"
 	},
 	{
 		"productID": "hc",
@@ -106,7 +117,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "ni",
@@ -115,7 +127,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "sn",
@@ -124,7 +137,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "sp",
@@ -133,7 +147,92 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12
+		"rateValue": 12,
+		"product_type":"futures"
+	},
+	{
+		"productID": "cu-P",
+		"productName": "铜看跌期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 13,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "cu-C",
+		"productName": "铜看涨期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 13,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "au-P",
+		"productName": "黄金看跌期权",
+		"multiplier": 1000,
+		"multiplierType": "克/手",
+		"priceType": "元/克",
+		"marginType": "元/手",
+		"rateValue": 13,
+		'strike_type': "克/手",
+		'last_type': "克/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "au-C",
+		"productName": "黄金看涨期权",
+		"multiplier": 1000,
+		"multiplierType": "克/手",
+		"priceType": "元/克",
+		"marginType": "元/手",
+		"rateValue": 13,
+		'strike_type': "克/手",
+		'last_type': "克/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "ru-P",
+		"productName": "橡胶看跌期权",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 16,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "ru-C",
+		"productName": "橡胶看涨期权",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 16,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
 	},
 	// ine
 	{
@@ -143,7 +242,8 @@ var productList = [
 		"multiplierType": "桶/手",
 		"priceType": "元/桶",
 		"marginType": "元/手",
-		"rateValue": 17
+		"rateValue": 17,
+		"product_type":"futures"
 	},
 	{
 		"productID": "nr",
@@ -152,7 +252,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 16
+		"rateValue": 16,
+		"product_type":"futures"
 	},
 	// dce
 	{
@@ -162,7 +263,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
 	},
 	{
 		"productID": "b",
@@ -171,7 +273,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
 	},
 	{
 		"productID": "c",
@@ -180,7 +283,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 10
+		"rateValue": 10,
+		"product_type":"futures"
 	},
 	{
 		"productID": "cs",
@@ -189,7 +293,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 10
+		"rateValue": 10,
+		"product_type":"futures"
 	},
 	{
 		"productID": "m",
@@ -198,7 +303,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
 	},
 	{
 		"productID": "y",
@@ -207,7 +313,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12
+		"rateValue": 12,
+		"product_type":"futures"
 	},
 	{
 		"productID": "p",
@@ -216,7 +323,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12
+		"rateValue": 12,
+		"product_type":"futures"
 	},
 	{
 		"productID": "l",
@@ -225,7 +333,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
 	},
 	{
 		"productID": "v",
@@ -234,7 +343,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
 	},
 	{
 		"productID": "j",
@@ -243,7 +353,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "jm",
@@ -252,7 +363,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "i",
@@ -261,7 +373,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "jd",
@@ -270,7 +383,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/500千克",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 13,
+		"product_type":"futures"
 	},
 	{
 		"productID": "bb",
@@ -279,7 +393,8 @@ var productList = [
 		"multiplierType": "张/手",
 		"priceType": "元/张",
 		"marginType": "元/手",
-		"rateValue": 23
+		"rateValue": 23,
+		"product_type":"futures"
 	},
 	{
 		"productID": "fb",
@@ -288,7 +403,8 @@ var productList = [
 		"multiplierType": "张/手",
 		"priceType": "元/张",
 		"marginType": "元/手",
-		"rateValue": 35
+		"rateValue": 35,
+		"product_type":"futures"
 	},
 	{
 		"productID": "pp",
@@ -297,7 +413,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
 	},
 	{
 		"productID": "eg",
@@ -306,7 +423,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 13,
+		"product_type":"futures"
 	},
 	{
 		"productID": "rr",
@@ -315,7 +433,92 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
+	},
+	{
+		"productID": "m-P",
+		"productName": "豆粕看跌期权",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 11,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "m-C",
+		"productName": "豆粕看涨期权",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 11,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "c-P",
+		"productName": "玉米看跌期权",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 10,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "c-C",
+		"productName": "玉米看涨期权",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 10,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "i-P",
+		"productName": "铁矿石看跌期权",
+		"multiplier": 100,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 15,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "i-C",
+		"productName": "铁矿石看涨期权",
+		"multiplier": 100,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 15,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
 	},
 	// czce
 	{
@@ -325,7 +528,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 24
+		"rateValue": 24,
+		"product_type":"futures"
 	},
 	{
 		"productID": "RI",
@@ -334,7 +538,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20
+		"rateValue": 20,
+		"product_type":"futures"
 	},
 	{
 		"productID": "LR",
@@ -343,7 +548,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20
+		"rateValue": 20,
+		"product_type":"futures"
 	},
 	{
 		"productID": "CF",
@@ -352,7 +558,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
 	},
 	{
 		"productID": "SR",
@@ -361,7 +568,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12
+		"rateValue": 12,
+		"product_type":"futures"
 	},
 	{
 		"productID": "TA",
@@ -370,7 +578,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12
+		"rateValue": 12,
+		"product_type":"futures"
 	},
 	{
 		"productID": "OI",
@@ -379,7 +588,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
 	},
 	{
 		"productID": "MA",
@@ -388,7 +598,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 14
+		"rateValue": 14,
+		"product_type":"futures"
 	},
 	{
 		"productID": "PM",
@@ -397,7 +608,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 21
+		"rateValue": 21,
+		"product_type":"futures"
 	},
 	{
 		"productID": "FG",
@@ -406,7 +618,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
 	},
 	{
 		"productID": "RS",
@@ -415,7 +628,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 23
+		"rateValue": 23,
+		"product_type":"futures"
 	},
 	{
 		"productID": "RM",
@@ -424,7 +638,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12
+		"rateValue": 12,
+		"product_type":"futures"
 	},
 	{
 		"productID": "ZC",
@@ -433,7 +648,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 13,
+		"product_type":"futures"
 	},
 	{
 		"productID": "JR",
@@ -442,7 +658,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20
+		"rateValue": 20,
+		"product_type":"futures"
 	},
 	{
 		"productID": "SF",
@@ -451,7 +668,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "SM",
@@ -460,7 +678,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "CY",
@@ -469,7 +688,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
 	},
 	{
 		"productID": "AP",
@@ -478,7 +698,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "CJ",
@@ -487,7 +708,8 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 13,
+		"product_type":"futures"
 	},
 	{
 		"productID": "UR",
@@ -496,7 +718,120 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 11
+		"rateValue": 11,
+		"product_type":"futures"
+	},
+	{
+		"productID": "CF-P",
+		"productName": "棉花看跌期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 11,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "CF-C",
+		"productName": "棉花看涨期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 11,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "SR-P",
+		"productName": "白糖看跌期权",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 12,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "SR-C",
+		"productName": "白糖看涨期权",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 12,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "TA-P",
+		"productName": "PTA看跌期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 12,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "TA-C",
+		"productName": "PTA看涨期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 12,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "MA-P",
+		"productName": "甲醇看跌期权",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 14,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "MA-C",
+		"productName": "甲醇看涨期权",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 14,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
 	},
 	// cffex
 	{
@@ -506,7 +841,8 @@ var productList = [
 		"multiplierType": "元/点",
 		"priceType": "点/手",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 13,
+		"product_type":"futures"
 	},
 	{
 		"productID": "IH",
@@ -515,7 +851,8 @@ var productList = [
 		"multiplierType": "元/点",
 		"priceType": "点/手",
 		"marginType": "元/手",
-		"rateValue": 13
+		"rateValue": 13,
+		"product_type":"futures"
 	},
 	{
 		"productID": "IC",
@@ -524,7 +861,8 @@ var productList = [
 		"multiplierType": "元/点",
 		"priceType": "点/手",
 		"marginType": "元/手",
-		"rateValue": 15
+		"rateValue": 15,
+		"product_type":"futures"
 	},
 	{
 		"productID": "TS",
@@ -533,7 +871,8 @@ var productList = [
 		"multiplierType": "元",
 		"priceType": "元",
 		"marginType": "元/手",
-		"rateValue": 1.0
+		"rateValue": 1.0,
+		"product_type":"futures"
 	},
 	{
 		"productID": "TF",
@@ -542,7 +881,8 @@ var productList = [
 		"multiplierType": "元",
 		"priceType": "元",
 		"marginType": "元/手",
-		"rateValue": 2.2
+		"rateValue": 2.2,
+		"product_type":"futures"
 	},
 	{
 		"productID": "T",
@@ -551,7 +891,8 @@ var productList = [
 		"multiplierType": "元",
 		"priceType": "元",
 		"marginType": "元/手",
-		"rateValue": 3
+		"rateValue": 3,
+		"product_type":"futures"
 	},
 	{
 		"productID": "IO-P",
@@ -564,7 +905,9 @@ var productList = [
 		"coefficient": 50,
 		'strike_type': "元/点",
 		'last_type': "元/点",
-		'otm_type': '元/点'
+		'otm_type': '元/点',
+		"options_type": "P",
+		"product_type":"spotoption"
 	}
 	,
 	{
@@ -578,6 +921,8 @@ var productList = [
 		"coefficient": 50,
 		'strike_type': "元/点",
 		'last_type': "元/点",
-		'otm_type': '元/点'
+		'otm_type': '元/点',
+		"options_type": "C",
+		"product_type":"spotoption"
 	}
 ]
