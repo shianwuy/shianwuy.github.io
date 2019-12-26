@@ -437,6 +437,16 @@ var productList = [
 		"product_type":"futures"
 	},
 	{
+		"productID": "eb",
+		"productName": "苯乙烯",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 11,
+		"product_type":"futures"
+	},
+	{
 		"productID": "m-P",
 		"productName": "豆粕看跌期权",
 		"multiplier": 10,
@@ -714,6 +724,16 @@ var productList = [
 	{
 		"productID": "UR",
 		"productName": "尿素",
+		"multiplier": 20,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 11,
+		"product_type":"futures"
+	},
+	{
+		"productID": "SA",
+		"productName": "纯碱",
 		"multiplier": 20,
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",

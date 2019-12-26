@@ -8,7 +8,7 @@ var productInfoMap = new Map();
 $(document).ready(function() {
     // alert("ready function callback");
     // loadSHFEPrice();
-    pareProduct("");
+    pareProduct("futures");
 });
 
 function loadSHFEPrice() {
