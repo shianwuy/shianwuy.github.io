@@ -242,7 +242,7 @@ var productList = [
 		"multiplierType": "桶/手",
 		"priceType": "元/桶",
 		"marginType": "元/手",
-		"rateValue": 114,
+		"rateValue": 14,
 		"product_type":"futures"
 	},
 	{
