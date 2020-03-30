@@ -540,6 +540,44 @@ var productList = [
 		"options_type": "C",
 		"product_type":"options"
 	},
+	{
+		"productID": "pg",
+		"productName": "液化石油气",
+		"multiplier": 20,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 18,
+		"product_type":"futures"
+	},
+	{
+		"productID": "pg-P",
+		"productName": "液化石油气看跌期权",
+		"multiplier": 20,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 18,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "pg-C",
+		"productName": "液化石油气看涨期权",
+		"multiplier": 20,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 18,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
 	// czce
 	{
 		"productID": "WH",
