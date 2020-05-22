@@ -7,7 +7,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 17,
 		"product_type":"futures"
 	},
 	{
@@ -17,7 +17,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 17,
+		"rateValue": 16,
 		"product_type":"futures"
 	},
 	{
@@ -27,7 +27,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 17,
 		"product_type":"futures"
 	},
 	{
@@ -37,7 +37,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 16,
 		"product_type":"futures"
 	},
 	{
@@ -47,7 +47,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20,
+		"rateValue": 18,
 		"product_type":"futures"
 	},
 	{
@@ -57,7 +57,7 @@ var productList = [
 		"multiplierType": "克/手",
 		"priceType": "元/克",
 		"marginType": "元/手",
-		"rateValue": 16,
+		"rateValue": 15,
 		"product_type":"futures"
 	},	
 	{
@@ -67,7 +67,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 25,
+		"rateValue": 23,
 		"product_type":"futures"
 	},
 	{
@@ -77,7 +77,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 15,
 		"product_type":"futures"
 	},
 	{
@@ -87,7 +87,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 24,
+		"rateValue": 40,
 		"product_type":"futures"
 	},
 	{
@@ -97,7 +97,7 @@ var productList = [
 		"multiplierType": "千克/手",
 		"priceType": "元/千克",
 		"marginType": "元/手",
-		"rateValue": 20,
+		"rateValue": 18,
 		"product_type":"futures"
 	},
 	{
@@ -107,7 +107,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 25,
+		"rateValue": 23,
 		"product_type":"futures"
 	},
 	{
@@ -117,7 +117,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 15,
 		"product_type":"futures"
 	},
 	{
@@ -127,7 +127,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 19,
+		"rateValue": 17,
 		"product_type":"futures"
 	},
 	{
@@ -137,7 +137,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 15,
 		"product_type":"futures"
 	},
 	{
@@ -147,7 +147,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 17,
 		"product_type":"futures"
 	},
 	{
@@ -157,7 +157,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15,
+		"rateValue": 13,
 		"product_type":"futures"
 	},
 	{
@@ -167,7 +167,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 17,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
@@ -181,7 +181,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 17,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
@@ -195,7 +195,7 @@ var productList = [
 		"multiplierType": "克/手",
 		"priceType": "元/克",
 		"marginType": "元/手",
-		"rateValue": 16,
+		"rateValue": 15,
 		'strike_type': "克/手",
 		'last_type': "克/手",
 		'otm_type': '元/手',
@@ -209,7 +209,7 @@ var productList = [
 		"multiplierType": "克/手",
 		"priceType": "元/克",
 		"marginType": "元/手",
-		"rateValue": 16,
+		"rateValue": 15,
 		'strike_type': "克/手",
 		'last_type': "克/手",
 		'otm_type': '元/手',
@@ -223,7 +223,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20,
+		"rateValue": 18,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
@@ -237,7 +237,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20,
+		"rateValue": 18,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
@@ -252,7 +252,7 @@ var productList = [
 		"multiplierType": "桶/手",
 		"priceType": "元/桶",
 		"marginType": "元/手",
-		"rateValue": 28,
+		"rateValue": 23,
 		"product_type":"futures"
 	},
 	{
@@ -262,7 +262,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20,
+		"rateValue": 18,
 		"product_type":"futures"
 	},
 	// dce
@@ -273,7 +273,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 16,
+		"rateValue": 14,
 		"product_type":"futures"
 	},
 	{
@@ -283,7 +283,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 16,
+		"rateValue": 14,
 		"product_type":"futures"
 	},
 	{
@@ -313,7 +313,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 16,
+		"rateValue": 15,
 		"product_type":"futures"
 	},
 	{
@@ -323,7 +323,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 16,
+		"rateValue": 15,
 		"product_type":"futures"
 	},
 	{
@@ -333,7 +333,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 17,
+		"rateValue": 15,
 		"product_type":"futures"
 	},
 	{
@@ -343,7 +343,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 21,
+		"rateValue": 17,
 		"product_type":"futures"
 	},
 	{
@@ -353,7 +353,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 21,
+		"rateValue": 16,
 		"product_type":"futures"
 	},
 	{
@@ -363,7 +363,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 16,
 		"product_type":"futures"
 	},
 	{
@@ -373,7 +373,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 16,
 		"product_type":"futures"
 	},
 	{
@@ -383,7 +383,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 20,
+		"rateValue": 17,
 		"product_type":"futures"
 	},
 	{
@@ -393,7 +393,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/500千克",
 		"marginType": "元/手",
-		"rateValue": 16,
+		"rateValue": 14,
 		"product_type":"futures"
 	},
 	{
@@ -423,7 +423,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 21,
+		"rateValue": 17,
 		"product_type":"futures"
 	},
 	{
@@ -433,7 +433,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 21,
+		"rateValue": 17,
 		"product_type":"futures"
 	},
 	{
@@ -453,7 +453,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 21,
+		"rateValue": 19,
 		"product_type":"futures"
 	},
 	{
@@ -547,7 +547,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 21,
+		"rateValue": 19,
 		"product_type":"futures"
 	},
 	{
@@ -557,7 +557,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 19,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
@@ -571,7 +571,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 19,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
@@ -586,7 +586,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15,
+		"rateValue": 40,
 		"product_type":"futures"
 	},
 	{
@@ -626,7 +626,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12,
+		"rateValue": 11,
 		"product_type":"futures"
 	},
 	{
@@ -636,7 +636,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 16,
 		"product_type":"futures"
 	},
 	{
@@ -646,7 +646,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 14,
+		"rateValue": 12,
 		"product_type":"futures"
 	},
 	{
@@ -656,7 +656,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 17,
+		"rateValue": 16,
 		"product_type":"futures"
 	},
 	{
@@ -696,7 +696,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 14,
+		"rateValue": 13,
 		"product_type":"futures"
 	},
 	{
@@ -766,7 +766,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 13,
+		"rateValue": 12,
 		"product_type":"futures"
 	},
 	{
@@ -776,7 +776,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12,
+		"rateValue": 11,
 		"product_type":"futures"
 	},
 	{
@@ -786,7 +786,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12,
+		"rateValue": 11,
 		"product_type":"futures"
 	},
 	{
@@ -796,7 +796,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15,
+		"rateValue": 14,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
@@ -810,7 +810,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 15,
+		"rateValue": 14,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
@@ -824,7 +824,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 12,
+		"rateValue": 14,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
@@ -852,7 +852,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 16,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
@@ -866,7 +866,7 @@ var productList = [
 		"multiplierType": "吨/手",
 		"priceType": "元/吨",
 		"marginType": "元/手",
-		"rateValue": 18,
+		"rateValue": 16,
 		'strike_type': "吨/手",
 		'last_type': "吨/手",
 		'otm_type': '元/手',
