@@ -265,6 +265,16 @@ var productList = [
 		"rateValue": 18,
 		"product_type":"futures"
 	},
+	{
+		"productID": "lu",
+		"productName": "低硫燃料油",
+		"multiplier": 10,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 23,
+		"product_type":"futures"
+	},
 	// dce
 	{
 		"productID": "a",
@@ -347,6 +357,34 @@ var productList = [
 		"product_type":"futures"
 	},
 	{
+		"productID": "l-C",
+		"productName": "聚乙烯看涨期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 17,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "l-P",
+		"productName": "聚乙烯看跌期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 17,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
 		"productID": "v",
 		"productName": "聚氯乙烯",
 		"multiplier": 5,
@@ -355,6 +393,34 @@ var productList = [
 		"marginType": "元/手",
 		"rateValue": 16,
 		"product_type":"futures"
+	},
+	{
+		"productID": "v-C",
+		"productName": "聚氯乙烯看涨期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 16,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "v-P",
+		"productName": "聚氯乙烯看跌期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 16,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
 	},
 	{
 		"productID": "j",
@@ -425,6 +491,34 @@ var productList = [
 		"marginType": "元/手",
 		"rateValue": 17,
 		"product_type":"futures"
+	},
+	{
+		"productID": "pp-C",
+		"productName": "聚丙烯看涨期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 17,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "pp-P",
+		"productName": "聚丙烯看跌期权",
+		"multiplier": 5,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 17,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
 	},
 	{
 		"productID": "eg",
@@ -708,6 +802,34 @@ var productList = [
 		"marginType": "元/手",
 		"rateValue": 13,
 		"product_type":"futures"
+	},
+	{
+		"productID": "ZC-C",
+		"productName": "动力煤看涨期权",
+		"multiplier": 100,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 13,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "C",
+		"product_type":"options"
+	},
+	{
+		"productID": "ZC-P",
+		"productName": "动力煤看跌期权",
+		"multiplier": 100,
+		"multiplierType": "吨/手",
+		"priceType": "元/吨",
+		"marginType": "元/手",
+		"rateValue": 13,
+		'strike_type': "吨/手",
+		'last_type': "吨/手",
+		'otm_type': '元/手',
+		"options_type": "P",
+		"product_type":"options"
 	},
 	{
 		"productID": "JR",
