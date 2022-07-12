@@ -275,6 +275,34 @@ var productList = [
 		"rateValue": 23,
 		"product_type":"futures"
 	},
+	{
+		"productID": "sc-P",
+		"productName": "原油看跌期权",
+		"multiplier": 1000,
+		"multiplierType": "元/桶",
+		"priceType": "元/桶",
+		"marginType": "元/手",
+		"rateValue": 23,
+		"strike_type": "桶/手",
+		"last_type": "桶/手",
+		"otm_type": "元/手",
+		"options_type": "P",
+		"product_type":"options"
+	},
+	{
+		"productID": "sc-C",
+		"productName": "原油看涨期权",
+		"multiplier": 1000,
+		"multiplierType": "元/桶",
+		"priceType": "元/桶",
+		"marginType": "元/手",
+		"rateValue": 23,
+		"strike_type": "桶/手",
+		"last_type": "桶/手",
+		"otm_type": "元/手",
+		"options_type": "C",
+		"product_type":"options"
+	},
 	// dce
 	{
 		"productID": "a",
@@ -1086,7 +1114,7 @@ var productList = [
 	},
 	{
 		"productID": "IO-P",
-		"productName": "沪深300看涨期权",
+		"productName": "沪深300看跌期权",
 		"multiplier": 100,
 		"multiplierType": "元/点",
 		"priceType": "点/手",
@@ -1102,7 +1130,7 @@ var productList = [
 	,
 	{
 		"productID": "IO-C",
-		"productName": "沪深300看跌期权",
+		"productName": "沪深300看涨期权",
 		"multiplier": 100,
 		"multiplierType": "元/点",
 		"priceType": "点/手",
