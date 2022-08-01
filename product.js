@@ -1083,6 +1083,16 @@ var productList = [
 		"product_type":"futures"
 	},
 	{
+		"productID": "IM",
+		"productName": "中证1000",
+		"multiplier": 200,
+		"multiplierType": "元/点",
+		"priceType": "点/手",
+		"marginType": "元/手",
+		"rateValue": 17,
+		"product_type":"futures"
+	},
+	{
 		"productID": "TS",
 		"productName": "两年国债",
 		"multiplier": 20000,
@@ -1126,8 +1136,7 @@ var productList = [
 		'otm_type': '元/点',
 		"options_type": "P",
 		"product_type":"spotoption"
-	}
-	,
+	},
 	{
 		"productID": "IO-C",
 		"productName": "沪深300看涨期权",
@@ -1136,6 +1145,36 @@ var productList = [
 		"priceType": "点/手",
 		"marginType": "元/手",
 		"rateValue": 13,
+		"coefficient": 50,
+		'strike_type': "元/点",
+		'last_type': "元/点",
+		'otm_type': '元/点',
+		"options_type": "C",
+		"product_type":"spotoption"
+	},
+	{
+		"productID": "MO-P",
+		"productName": "中证1000看跌期权",
+		"multiplier": 100,
+		"multiplierType": "元/点",
+		"priceType": "点/手",
+		"marginType": "元/手",
+		"rateValue": 17,
+		"coefficient": 50,
+		'strike_type': "元/点",
+		'last_type': "元/点",
+		'otm_type': '元/点',
+		"options_type": "P",
+		"product_type":"spotoption"
+	},
+	{
+		"productID": "MO-C",
+		"productName": "中证1000看涨期权",
+		"multiplier": 100,
+		"multiplierType": "元/点",
+		"priceType": "点/手",
+		"marginType": "元/手",
+		"rateValue": 17,
 		"coefficient": 50,
 		'strike_type': "元/点",
 		'last_type': "元/点",
